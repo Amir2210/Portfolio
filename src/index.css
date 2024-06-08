@@ -8,7 +8,11 @@
     @apply mx-auto max-w-4xl px-4;
   }
 
-  .gradient-text {
+  .gradient-hover-text {
     @apply bg-gradient-to-b from-gradient-purple via-gradient-red to-gradient-orange1 bg-clip-text hover:text-transparent duration-100;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-b from-gradient-purple via-gradient-red to-gradient-orange1 bg-clip-text text-transparent;
   }
 }
