@@ -9,7 +9,7 @@
   }
 
   .gradient-hover-text {
-    @apply bg-gradient-to-b from-gradient-purple via-gradient-red to-gradient-orange1 bg-clip-text hover:text-transparent duration-100;
+    @apply bg-gradient-to-r from-gradient-purple via-gradient-red to-gradient-orange1 bg-clip-text hover:text-transparent duration-100;
   }
 
   .gradient-text {
