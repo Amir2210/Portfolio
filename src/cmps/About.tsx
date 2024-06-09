@@ -8,7 +8,7 @@ export function About() {
           <p className='mt-4 tracking-wide'>Full Stack programmer specializing in Frontend development. I focus on creating engaging user experiences and solving complex problems. I really like reading books and sports</p>
         </div>
         <div>
-          <img src="src/assets/avatar.png" alt="" />
+          <img src="src/assets/avatar.png" alt="avatar" />
         </div>
       </div>
     </section>
