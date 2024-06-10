@@ -11,6 +11,7 @@ export default {
       },
       colors: {
         'bg-dark': '#161613',
+        'gray': '#a3a3a3',
         'gradient-purple': '#B16CEA',
         'gradient-red': '#FF5E69',
         'gradient-orange': '#FF8A56',

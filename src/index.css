@@ -15,4 +15,12 @@
   .gradient-text {
     @apply bg-gradient-to-r from-gradient-purple via-gradient-red to-gradient-orange1 bg-clip-text text-transparent;
   }
+
+  .gradient-bg {
+    @apply bg-gradient-to-r from-gradient-purple via-gradient-red to-gradient-orange1;
+  }
+
+  .purple-outline {
+    @apply outline outline-offset-1 outline-2 outline-gradient-purple px-4 py-2 rounded-md hover:gradient-bg hover:outline-none duration-150;
+  }
 }
