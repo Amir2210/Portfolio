@@ -1,6 +1,29 @@
+import { motion } from "framer-motion"
 export function About() {
+
+  const fadeInAnimations = {
+    initial: {
+      opacity: 0,
+      x: -200
+    },
+    animate: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        delay: 0.8
+      }
+    }
+  }
+
   return (
-    <section className='align-elemets text-white'>
+    <motion.section className='align-elemets text-white'
+      variants={fadeInAnimations}
+      initial="initial"
+      whileInView="animate"
+      viewport={{
+        once: true
+      }}
+    >
       <div className='sm:mt-10 mt-4 sm:flex gap-5 justify-center'>
         <div className=''>
           <h1 className='justify-center flex capitalize text-4xl sm:text-6xl gradient-text font-semibold tracking-wider'>amir yankolovich</h1>
@@ -19,6 +42,6 @@ export function About() {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   )
 }

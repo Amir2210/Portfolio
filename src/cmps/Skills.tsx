@@ -1,7 +1,30 @@
+import { motion } from "framer-motion"
 export function Skills() {
+
+  const fadeInAnimations = {
+    initial: {
+      opacity: 0,
+      x: 200
+    },
+    animate: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        delay: 0.8
+      }
+    }
+  }
+
   return (
-    <section className='align-elemets px-4 py-2'>
-      <h1 className='capitalize text-2xl gradient-text text-center font-semibold mb-4'>my skills:</h1>
+    <motion.section className='align-elemets px-4 py-2'
+      variants={fadeInAnimations}
+      initial="initial"
+      whileInView="animate"
+      viewport={{
+        once: true
+      }}
+    >
+      <h1 className='capitalize text-2xl gradient-text text-center font-semibold my-4'>my skills:</h1>
       <div className='grid grid-cols-2 sm:grid-cols-5 sm:gap-3 place-items-center'>
         <div className='sm:p-4'>
           <img className='size-14' src="src/assets/js.png" alt="js logo" />
@@ -34,6 +57,6 @@ export function Skills() {
           <img className='size-14' src="src/assets/mongo.png" alt="mongo logo" />
         </div>
       </div>
-    </section>
+    </motion.section>
   )
 }
