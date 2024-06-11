@@ -17,7 +17,7 @@ export default {
         'gradient-orange': '#FF8A56',
         'gradient-orange1': '#FFA84B',
         'linkedin': '#0A66C2',
-        'github': '#6e5494'
+        'github': '#6e5494',
       },
     },
   },

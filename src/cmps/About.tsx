@@ -24,7 +24,7 @@ export function About() {
         once: true
       }}
     >
-      <div className='sm:mt-10 mt-4 sm:flex gap-5 justify-center'>
+      <div className='sm:mt-10 mt-4 sm:flex gap-5 justify-center' id='about'>
         <div className=''>
           <h1 className='justify-center flex capitalize text-4xl sm:text-6xl gradient-text font-semibold tracking-wider'>amir yankolovich</h1>
           <h2 className='capitalize mt-4 text-xl sm:text-3xl justify-center flex sm:justify-start'>full stack / frontend developer.</h2>

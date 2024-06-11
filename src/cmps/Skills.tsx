@@ -16,7 +16,7 @@ export function Skills() {
   }
 
   return (
-    <motion.section className='align-elemets px-4 py-2'
+    <motion.section className='align-elemets px-4 py-2 mt-4'
       variants={fadeInAnimations}
       initial="initial"
       whileInView="animate"
@@ -25,7 +25,7 @@ export function Skills() {
       }}
     >
       <h1 className='capitalize text-2xl gradient-text text-center font-semibold my-4'>my skills:</h1>
-      <div className='grid grid-cols-2 sm:grid-cols-5 sm:gap-3 place-items-center'>
+      <div className='grid grid-cols-2 sm:grid-cols-5 sm:gap-3 place-items-center mt-8'>
         <div className='sm:p-4'>
           <img className='size-14' src="src/assets/js.png" alt="js logo" />
         </div>
