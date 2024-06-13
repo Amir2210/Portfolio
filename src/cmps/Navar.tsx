@@ -12,7 +12,6 @@ export function Navbar() {
         <ul className='items-center gap-4 text-white capitalize hidden md:flex'>
           <li className='gradient-hover-text'><a href="#about">about</a></li>
           <li className='gradient-hover-text'><a href="#projects"> projects</a></li>
-          <li className='gradient-hover-text'><a href="">mini components</a> </li>
           <li className='gradient-hover-text'><a href="">connect</a></li>
           <li><PiLineVerticalLight /></li>
           <li><a href="https://www.linkedin.com/in/amir-yankolovich/" target="_blank"><FaLinkedin className='text-2xl hover:text-linkedin duration-100' /></a></li>
