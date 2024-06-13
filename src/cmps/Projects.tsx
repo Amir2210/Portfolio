@@ -37,7 +37,7 @@ export function Projects() {
               <FaLink className='text-lg' />
             </div>
             <p className='text-gray text-sm mt-4'>📰 Job Tracker streamlines your job search by efficiently organizing a watch list. Easily manage the jobs you've applied for.</p>
-            <div className='flex flex-wrap text-white text-sm gap-3 mt-auto capitalize items-center'>
+            <div className='flex flex-wrap text-white text-sm gap-3 mt-4 sm:mt-auto capitalize items-center'>
               <div className='bg-white/5 p-1 rounded-md'>
                 <span>react</span>
               </div>
@@ -69,7 +69,7 @@ export function Projects() {
               <FaLink className='text-lg' />
             </div>
             <p className='text-gray text-sm mt-4'>🪑 ComfyStore  offers stylish furniture for every room. Shop and customize your perfect pieces with ease.</p>
-            <div className='flex flex-wrap text-white text-sm gap-3 mt-auto  capitalize items-center'>
+            <div className='flex flex-wrap text-white text-sm gap-3 mt-4 sm:mt-auto capitalize items-center'>
               <div className='bg-white/5 p-1 rounded-md'>
                 <span>react</span>
               </div>
@@ -98,7 +98,7 @@ export function Projects() {
               <FaLink className='text-lg' />
             </div>
             <p className='text-gray text-sm mt-4'>🌎 GlobeTrek app designed to help users plan and discover their next adventure trek. Users can explore various destinations, view details about each trek, and access helpful resources for planning their journey.</p>
-            <div className='flex flex-wrap text-white text-sm gap-3 mt-auto capitalize items-center'>
+            <div className='flex flex-wrap text-white text-sm gap-3 mt-4 sm:mt-auto capitalize items-center'>
               <div className='bg-white/5 p-1 rounded-md'>
                 <span>react</span>
               </div>
@@ -118,7 +118,7 @@ export function Projects() {
               <FaLink className='text-lg' />
             </div>
             <p className='text-gray text-sm mt-4'>📸 Unsplash images finder using the Unsplash API.</p>
-            <div className='flex flex-wrap text-white text-sm gap-3 mt-auto capitalize items-center'>
+            <div className='flex flex-wrap text-white text-sm gap-3 mt-4 sm:mt-auto capitalize items-center'>
               <div className='bg-white/5 p-1 rounded-md'>
                 <span>react</span>
               </div>
