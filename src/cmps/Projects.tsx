@@ -26,7 +26,7 @@ export function Projects() {
       }}
     >
       <h1 className='gradient-text text-center capitalize text-3xl tracking-wider font-semibold my-4'>projects</h1>
-      <div className='flex flex-col sm:flex-row gap-5 justify-between mt-8'>
+      <div className='flex flex-col sm:grid sm:grid-cols-2 gap-y-5  mt-8'>
         <a href='https://jobtracker-x1u9.onrender.com' target="_blank" className="sm:h-72 sm:w-96 rounded-md bg-gradient-to-r from-gradient-purple via-gradient-red to-gradient-orange1 p-1 hover:scale-105 duration-300">
           <div className="flex flex-col h-full w-full  bg-bg-dark p-2">
             <div className='bg-white/5 size-14 flex items-center justify-center rounded-md '>
@@ -104,6 +104,29 @@ export function Projects() {
               </div>
               <div className='bg-white/5 p-1 rounded-md'>
                 <span>scss</span>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a href='https://unsplash-imagesfinder.netlify.app/' target="_blank" className="sm:h-72 sm:w-96 rounded-md bg-gradient-to-r from-gradient-purple via-gradient-red to-gradient-orange1 p-1 hover:scale-105 duration-300">
+          <div className="flex flex-col h-full w-full  bg-bg-dark p-2">
+            <div className='bg-white/5 size-14 flex items-center justify-center p-2  rounded-md '>
+              <img src="src/assets/imgfinder.png" alt="app logo" />
+            </div>
+            <div className='flex items-center mt-2 text-white gap-2'>
+              <h1 className=" capitalize ">Unsplash Images</h1>
+              <FaLink className='text-lg' />
+            </div>
+            <p className='text-gray text-sm mt-4'>📸 Unsplash images finder using the Unsplash API.</p>
+            <div className='flex flex-wrap text-white text-sm gap-3 mt-auto capitalize items-center'>
+              <div className='bg-white/5 p-1 rounded-md'>
+                <span>react</span>
+              </div>
+              <div className='bg-white/5 p-1 rounded-md'>
+                <span>React Query</span>
+              </div>
+              <div className='bg-white/5 p-1 rounded-md'>
+                <span>css</span>
               </div>
             </div>
           </div>
