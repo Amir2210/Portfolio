@@ -17,7 +17,7 @@ export function Projects() {
   }
 
   return (
-    <motion.section className='align-elemets mt-4' id='projects'
+    <motion.section className='align-elemets mt-12' id='projects'
       variants={fadeInAnimations}
       initial="initial"
       whileInView="animate"

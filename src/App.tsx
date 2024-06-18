@@ -1,4 +1,5 @@
 import { About } from './cmps/About'
+import { Contact } from './cmps/Contact'
 import { Navbar } from './cmps/Navar'
 import { Projects } from './cmps/Projects'
 import { Skills } from './cmps/Skills'
@@ -11,6 +12,7 @@ function App() {
       <About />
       <Skills />
       <Projects />
+      <Contact />
     </div>
   )
 }

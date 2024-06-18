@@ -16,7 +16,7 @@ export function Skills() {
   }
 
   return (
-    <motion.section className='align-elemets px-4 py-2 mt-4'
+    <motion.section className='align-elemets px-4 py-2 mt-12'
       variants={fadeInAnimations}
       initial="initial"
       whileInView="animate"
