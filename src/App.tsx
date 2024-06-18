@@ -5,6 +5,7 @@ import { Projects } from './cmps/Projects'
 import { Skills } from './cmps/Skills'
 import 'react-toastify/dist/ReactToastify.css'
 import { ToastContainer } from 'react-toastify'
+import { Certifications } from './cmps/Certifications'
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
       <About />
       <Skills />
       <Projects />
+      <Certifications />
       <Contact />
     </div>
   )

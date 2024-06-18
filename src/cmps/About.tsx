@@ -31,14 +31,14 @@ export function About() {
           <p className='mt-4 tracking-wider text-gray text-center sm:text-left'>Full Stack programmer specializing in Frontend development. I focus on creating engaging user experiences and solving complex problems. I really like reading books and sports</p>
           <div className='hidden sm:flex sm:flex-wrap gap-5 my-4 items-center'>
             <div className='capitalize cursor-pointer purple-outline'>download CV</div>
-            <div className='capitalize cursor-pointer purple-outline'>certifications</div>
+            <div className='capitalize cursor-pointer purple-outline'><a href="#certifications">licenses & certifications</a></div>
           </div>
         </div>
         <div>
           <img src="src/assets/avatar.png" alt="avatar" />
           <div className='flex flex-wrap justify-center sm:hidden gap-5 my-4 items-center'>
             <div className='capitalize cursor-pointer purple-outline'>download CV</div>
-            <div className='capitalize cursor-pointer purple-outline'>certifications</div>
+            <div className='capitalize cursor-pointer purple-outline'>licenses & certifications</div>
           </div>
         </div>
       </div>

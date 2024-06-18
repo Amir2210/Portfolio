@@ -27,9 +27,9 @@ export function Contact() {
             console.log('FAILED...', error.text)
             toast.error(`Failed to send mail`)
           },
-        );
+        )
     }
-  };
+  }
 
   return (
     <section className='mt-12 border border-t-gray' id='contact'>
