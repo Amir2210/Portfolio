@@ -28,7 +28,7 @@ export function Projects() {
       <h1 className='gradient-text text-center capitalize text-3xl tracking-wider font-semibold my-4'>projects</h1>
       <div className='flex flex-col sm:grid sm:grid-cols-2 gap-y-5  mt-8'>
         <a href='https://jobtracker-x1u9.onrender.com' target="_blank" className="sm:h-72 sm:w-96 rounded-md bg-gradient-to-r from-gradient-purple via-gradient-red to-gradient-orange1 p-1 hover:scale-105 duration-300">
-          <div className="flex flex-col h-full w-full  bg-bg-dark p-2">
+          <div className="rounded-md flex flex-col h-full w-full  bg-bg-dark p-2">
             <div className='bg-white/5 size-14 flex items-center justify-center rounded-md '>
               <img src="src/assets/jobtracker.png" alt="app logo" />
             </div>
@@ -60,7 +60,7 @@ export function Projects() {
           </div>
         </a>
         <a href='https://comfy-store-xaft.onrender.com' target="_blank" className="sm:h-72 sm:w-96 rounded-md bg-gradient-to-r from-gradient-purple via-gradient-red to-gradient-orange1 p-1 hover:scale-105 duration-300">
-          <div className="flex flex-col h-full w-full  bg-bg-dark p-2">
+          <div className="rounded-md flex flex-col h-full w-full  bg-bg-dark p-2">
             <div className='bg-white/5 size-14 flex items-center justify-center p-2  rounded-md '>
               <img src="src/assets/comfystore.png" alt="app logo" />
             </div>
@@ -89,7 +89,7 @@ export function Projects() {
           </div>
         </a>
         <a href='https://globetrek.netlify.app/' target="_blank" className="sm:h-72 sm:w-96 rounded-md bg-gradient-to-r from-gradient-purple via-gradient-red to-gradient-orange1 p-1 hover:scale-105 duration-300">
-          <div className="flex flex-col h-full w-full  bg-bg-dark p-2">
+          <div className="rounded-md flex flex-col h-full w-full  bg-bg-dark p-2">
             <div className='bg-white/5 size-14 flex items-center justify-center p-2  rounded-md '>
               <img src="src/assets/globetrek.png" alt="app logo" />
             </div>
@@ -109,7 +109,7 @@ export function Projects() {
           </div>
         </a>
         <a href='https://unsplash-imagesfinder.netlify.app/' target="_blank" className="sm:h-72 sm:w-96 rounded-md bg-gradient-to-r from-gradient-purple via-gradient-red to-gradient-orange1 p-1 hover:scale-105 duration-300">
-          <div className="flex flex-col h-full w-full  bg-bg-dark p-2">
+          <div className="rounded-md flex flex-col h-full w-full  bg-bg-dark p-2">
             <div className='bg-white/5 size-14 flex items-center justify-center p-2  rounded-md '>
               <img src="src/assets/imgfinder.png" alt="app logo" />
             </div>
