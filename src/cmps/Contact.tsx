@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
-
+import { toast } from 'react-toastify'
 // type Email = {
 //   name: string,
 //   mail: string,
@@ -30,9 +30,11 @@ export function Contact() {
             setName('')
             setEmail('')
             setTxt('')
+            toast.success(`Mail sent successfully`)
           },
           (error) => {
-            console.log('FAILED...', error.text);
+            console.log('FAILED...', error.text)
+            toast.error(`Failed to send mail`)
           },
         );
     }
