@@ -42,7 +42,7 @@ export function Contact() {
         <input onChange={(ev) => setName(ev.target.value)} value={name} placeholder='Full Name' className='outline outline-offset-1 outline-2 outline-gradient-purple p-2 rounded-sm border-none w-full max-w-xs my-4 bg-bg-dark text-white' type="text" name="from_name" required />
         <input onChange={(ev) => setEmail(ev.target.value)} value={email} placeholder='Email Address' className='outline outline-offset-1 outline-2 outline-gradient-purple p-2 rounded-sm border-none w-full max-w-xs my-4 bg-bg-dark text-white' type="email" name="from_email" required />
         <textarea onChange={(ev) => setTxt(ev.target.value)} value={txt} className='outline outline-offset-1 outline-2 outline-gradient-purple p-2 rounded-sm border-none my-4 w-full max-w-xs  bg-bg-dark text-white' placeholder='Your Message' name="message" required />
-        <input className='outline outline-offset-1 outline-2 outline-gradient-purple p-2 rounded-sm border-none my-4 w-32 max-w-xs bg-bg-dark text-white' type="submit" value="Send" />
+        <input className='cursor-pointer outline outline-offset-1 outline-2 outline-gradient-purple p-2 rounded-sm border-none my-4 w-32 max-w-xs bg-bg-dark text-white' type="submit" value="Send" />
       </form>
     </section>
   );
