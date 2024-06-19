@@ -1,4 +1,4 @@
-import { FaLink } from "react-icons/fa";
+import { FaLink } from "react-icons/fa"
 import { motion } from "framer-motion"
 export function Projects() {
 
