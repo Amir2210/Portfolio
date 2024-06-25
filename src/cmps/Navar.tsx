@@ -4,7 +4,7 @@ import { PiLineVerticalLight } from "react-icons/pi"
 
 export function Navbar() {
   return (
-    <nav className='sticky top-0 bg-bg-dark shadow-lg'>
+    <nav className='sticky top-0 bg-bg-dark/95 shadow-lg z-10 '>
       <div className="align-elemets flex justify-between min-h-20 w-full  items-center">
         <div className='size-12'>
           <img className='rounded-full' src="src/assets/avatar.png" alt="logo" />

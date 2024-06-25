@@ -88,7 +88,7 @@ export function Projects() {
             </div>
           </div>
         </a>
-        <a href='https://globetrek.netlify.app/' target="_blank" className="sm:h-72 sm:w-96 rounded-md bg-gradient-to-r from-gradient-purple via-gradient-red to-gradient-orange1 p-1 hover:scale-105 duration-300">
+        <a href='https://globetrek.vercel.app/' target="_blank" className="sm:h-72 sm:w-96 rounded-md bg-gradient-to-r from-gradient-purple via-gradient-red to-gradient-orange1 p-1 hover:scale-105 duration-300">
           <div className="rounded-md flex flex-col h-full w-full  bg-bg-dark p-2">
             <div className='bg-white/5 size-14 flex items-center justify-center p-2  rounded-md '>
               <img src="src/assets/globetrek.png" alt="app logo" />
