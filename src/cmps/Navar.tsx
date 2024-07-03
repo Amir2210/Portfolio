@@ -7,7 +7,7 @@ export function Navbar() {
     <nav className='sticky top-0 bg-bg-dark/95 shadow-lg z-10 '>
       <div className="align-elemets flex justify-between min-h-20 w-full  items-center">
         <div className='size-12'>
-          <img className='rounded-full' src="src/assets/avatar.png" alt="logo" />
+          <img className='rounded-full' src="src/assets/imgs/avatar.png" alt="logo" />
         </div>
         <ul className='items-center gap-4 text-white capitalize hidden md:flex'>
           <li className='gradient-hover-text'><a href="#about">about</a></li>

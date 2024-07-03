@@ -27,34 +27,34 @@ export function Skills() {
       <h1 className='capitalize text-2xl gradient-text text-center font-semibold my-4'>my skills:</h1>
       <div className='grid grid-cols-2 sm:grid-cols-5 sm:gap-3 place-items-center mt-8'>
         <div className='sm:p-4'>
-          <img className='size-14' src="src/assets/js.png" alt="js logo" />
+          <img className='size-14' src="src/assets/imgs/js.png" alt="js logo" />
         </div>
         <div className='p-2 sm:p-4'>
-          <img className='size-14' src="src/assets/css.png" alt="css logo" />
+          <img className='size-14' src="src/assets/imgs/css.png" alt="css logo" />
         </div>
         <div className='p-2 sm:p-4'>
-          <img className='size-14' src="src/assets/html.png" alt="html logo" />
+          <img className='size-14' src="src/assets/imgs/html.png" alt="html logo" />
         </div>
         <div className='p-2 sm:p-4'>
-          <img className='size-14' src="src/assets/ts.png" alt="ts logo" />
+          <img className='size-14' src="src/assets/imgs/ts.png" alt="ts logo" />
         </div>
         <div className='p-2 sm:p-4'>
-          <img className='size-14' src="src/assets/react.png" alt="react logo" />
+          <img className='size-14' src="src/assets/imgs/react.png" alt="react logo" />
         </div>
         <div className='p-2 sm:p-4'>
-          <img className='size-14' src="src/assets/sass.png" alt="sass logo" />
+          <img className='size-14' src="src/assets/imgs/sass.png" alt="sass logo" />
         </div>
         <div className='p-2 sm:p-4'>
-          <img className='size-14' src="src/assets/tailwind.png" alt="tailwind logo" />
+          <img className='size-14' src="src/assets/imgs/tailwind.png" alt="tailwind logo" />
         </div >
         <div className='p-2 sm:p-4'>
-          <img className='size-14' src="src/assets/redux.png" alt="redux logo" />
+          <img className='size-14' src="src/assets/imgs/redux.png" alt="redux logo" />
         </div>
         <div className='p-2 sm:p-4'>
-          <img className='size-14' src="src/assets/node.png" alt="node logo" />
+          <img className='size-14' src="src/assets/imgs/node.png" alt="node logo" />
         </div>
         <div className='p-2 sm:p-4'>
-          <img className='size-14' src="src/assets/mongo.png" alt="mongo logo" />
+          <img className='size-14' src="src/assets/imgs/mongo.png" alt="mongo logo" />
         </div>
       </div>
     </motion.section>
