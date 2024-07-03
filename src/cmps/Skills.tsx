@@ -1,4 +1,14 @@
 import { motion } from "framer-motion"
+import js from '../assets/imgs/js.png'
+import css from '../assets/imgs/css.png'
+import html from '../assets/imgs/html.png'
+import ts from '../assets/imgs/ts.png'
+import react from '../assets/imgs/react.png'
+import sass from '../assets/imgs/sass.png'
+import tailwind from '../assets/imgs/tailwind.png'
+import redux from '../assets/imgs/redux.png'
+import node from '../assets/imgs/node.png'
+import mongo from '../assets/imgs/mongo.png'
 export function Skills() {
 
   const fadeInAnimations = {
@@ -27,34 +37,34 @@ export function Skills() {
       <h1 className='capitalize text-2xl gradient-text text-center font-semibold my-4'>my skills:</h1>
       <div className='grid grid-cols-2 sm:grid-cols-5 sm:gap-3 place-items-center mt-8'>
         <div className='sm:p-4'>
-          <img className='size-14' src="src/assets/imgs/js.png" alt="js logo" />
+          <img className='size-14' src={js} alt="js logo" />
         </div>
         <div className='p-2 sm:p-4'>
-          <img className='size-14' src="src/assets/imgs/css.png" alt="css logo" />
+          <img className='size-14' src={css} alt="css logo" />
         </div>
         <div className='p-2 sm:p-4'>
-          <img className='size-14' src="src/assets/imgs/html.png" alt="html logo" />
+          <img className='size-14' src={html} alt="html logo" />
         </div>
         <div className='p-2 sm:p-4'>
-          <img className='size-14' src="src/assets/imgs/ts.png" alt="ts logo" />
+          <img className='size-14' src={ts} alt="ts logo" />
         </div>
         <div className='p-2 sm:p-4'>
-          <img className='size-14' src="src/assets/imgs/react.png" alt="react logo" />
+          <img className='size-14' src={react} alt="react logo" />
         </div>
         <div className='p-2 sm:p-4'>
-          <img className='size-14' src="src/assets/imgs/sass.png" alt="sass logo" />
+          <img className='size-14' src={sass} alt="sass logo" />
         </div>
         <div className='p-2 sm:p-4'>
-          <img className='size-14' src="src/assets/imgs/tailwind.png" alt="tailwind logo" />
+          <img className='size-14' src={tailwind} alt="tailwind logo" />
         </div >
         <div className='p-2 sm:p-4'>
-          <img className='size-14' src="src/assets/imgs/redux.png" alt="redux logo" />
+          <img className='size-14' src={redux} alt="redux logo" />
         </div>
         <div className='p-2 sm:p-4'>
-          <img className='size-14' src="src/assets/imgs/node.png" alt="node logo" />
+          <img className='size-14' src={node} alt="node logo" />
         </div>
         <div className='p-2 sm:p-4'>
-          <img className='size-14' src="src/assets/imgs/mongo.png" alt="mongo logo" />
+          <img className='size-14' src={mongo} alt="mongo logo" />
         </div>
       </div>
     </motion.section>
