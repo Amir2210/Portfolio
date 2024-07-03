@@ -32,7 +32,7 @@ export function Contact() {
   }
 
   return (
-    <section className='mt-12 border border-t-gray' id='contact'>
+    <section className='mt-12 ' id='contact'>
       <h1 className='gradient-text text-center capitalize text-3xl tracking-wider font-semibold my-4 flex justify-center'>contact</h1>
       <div className='flex justify-center items-center text-white gap-4'>
         <a href="https://www.linkedin.com/in/amir-yankolovich/" target="_blank"><FaLinkedin className='text-2xl hover:text-linkedin duration-100' /></a>
