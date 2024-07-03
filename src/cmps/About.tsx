@@ -39,7 +39,7 @@ export function About() {
           <img src={avatar} alt="avatar" />
           <div className='flex flex-wrap justify-center sm:hidden gap-5 my-4 items-center'>
             <div className='capitalize cursor-pointer purple-outline'>download CV</div>
-            <div className='capitalize cursor-pointer purple-outline'>licenses & certifications</div>
+            <div className='capitalize cursor-pointer purple-outline'><a href="#certifications">licenses & certifications</a></div>
           </div>
         </div>
       </div>

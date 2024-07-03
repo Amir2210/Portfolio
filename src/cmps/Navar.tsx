@@ -24,8 +24,7 @@ export function Navbar() {
           <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 right-0">
             <li className='gradient-hover-text'><a href="#about">about</a></li>
             <li className='gradient-hover-text'><a href="#projects"> projects</a></li>
-            <li className='gradient-hover-text'><a href="">mini components</a> </li>
-            <li className='gradient-hover-text'><a href="">connect</a></li>
+            <li className='gradient-hover-text'><a href="#contact">connect</a></li>
             <li><PiLineVerticalLight /></li>
             <li><a href="https://www.linkedin.com/in/amir-yankolovich/" target="_blank"><FaLinkedin className='text-2xl hover:text-linkedin duration-100' /></a></li>
             <li><a href="https://github.com/Amir2210" target="_blank"><FaGithub className='text-2xl hover:text-github duration-100' /></a></li>
