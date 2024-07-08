@@ -34,3 +34,10 @@ Feel free to reach out to me on:
 **I'm always open to collaborating on exciting projects!**
 
 **Happy Coding!**
+![‏‏לכידה](https://github.com/Amir2210/Portfolio/assets/107459404/906bd107-7712-4d82-9c4e-f41ac1f1c89d)
+![‏‏לכידה](https://github.com/Amir2210/Portfolio/assets/107459404/04cfed0b-e459-46d8-9a55-488ae2384bf7)
+![‏‏לכידה](https://github.com/Amir2210/Portfolio/assets/107459404/1892e7ca-4244-4e78-8411-787a00e750d0)
+![‏‏לכידה](https://github.com/Amir2210/Portfolio/assets/107459404/79f59d66-86f1-4fec-b273-6438b28de198)
+
+
+
