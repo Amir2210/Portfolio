@@ -1,30 +1,34 @@
-# React + TypeScript + Vite
+ Amir's Full-Stack /  Front-End Playground  (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Hi there! **
 
-Currently, two official plugins are available:
+Honorably discharged from military since Sep 2023. Highly motivated, curious Full Stack / Front End 
+Developer. Solid foundation in building dynamic web applications. Proficient in using React, Next.js for 
+creating efficient and appealing user interfaces. Autodidact, problem solver with high work ethic. Keen to 
+leverage Node.js for server-side development and build clean user interface applications.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* **Front-End:** JavaScript | TypeScript | React | Next.js |Redux | HTML | CSS | SCSS | Tailwind 
+* **Back-End:** Node.js | Express.js | MongoDB | Express.js | Rest API 
 
-## Expanding the ESLint configuration
+**Projects:**
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+* **JobTracker:** Support of secure user authentication with JWT that offers to streamline job search by efficiently organizing a watch list. Easily manage the applied jobs.
+Live Website : https://jobtracker-x1u9.onrender.com/
 
-- Configure the top-level `parserOptions` property like this:
+* **Weather App:** Enables users to search for a city and access detailed weather information, including temperature, humidity, wind speed, and more for current day and a 7-day forecast.
+Live Website : https://weather-app-lovat-eight-87.vercel.app/
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+* **ComfyStore:** Developed a full-stack furniture application featuring secure user authentication with JWT and encrypted cookies for enhanced security.
+Live Website : https://comfy-store-xaft.onrender.com/
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+**Let's Connect!**
+
+Feel free to reach out to me on:
+
+* Email: amiryankolovich2000@gmail.com
+* LinkedIn: https://www.linkedin.com/in/amir-yankolovich/
+
+**I'm always open to collaborating on exciting projects!**
+
+**Happy Coding!**
