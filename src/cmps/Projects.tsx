@@ -4,6 +4,7 @@ import jonTracker from '../assets/imgs/jobtracker.png'
 import comfyStore from '../assets/imgs/comfystore.png'
 import weatherApp from '../assets/imgs/weather.png'
 import globeTrek from '../assets/imgs/globetrek.png'
+import countryExplorer from '../assets/imgs/israel.png'
 export function Projects() {
 
   const fadeInAnimations = {
@@ -30,8 +31,8 @@ export function Projects() {
       }}
     >
       <h1 className='gradient-text text-center capitalize text-3xl tracking-wider font-semibold my-4'>projects</h1>
-      <div className='flex flex-col sm:grid sm:grid-cols-2 gap-y-5  mt-8'>
-        <a href='https://jobtracker-x1u9.onrender.com' target="_blank" className="sm:h-72 sm:w-96 rounded-md bg-gradient-to-r from-gradient-purple via-gradient-red to-gradient-orange1 p-1 hover:scale-105 duration-300">
+      <div className='flex flex-col sm:grid sm:grid-cols-2 gap-5 mt-8'>
+        <a href='https://jobtracker-x1u9.onrender.com' target="_blank" className="sm:h-72 rounded-md bg-gradient-to-r from-gradient-purple via-gradient-red to-gradient-orange1 p-1 hover:scale-105 duration-300">
           <div className="rounded-md flex flex-col h-full w-full  bg-bg-dark p-2">
             <div className='bg-white/5 size-14 flex items-center justify-center rounded-md '>
               <img src={jonTracker} alt="app logo" />
@@ -63,7 +64,7 @@ export function Projects() {
             </div>
           </div>
         </a>
-        <a href='https://comfy-store-xaft.onrender.com' target="_blank" className="sm:h-72 sm:w-96 rounded-md bg-gradient-to-r from-gradient-purple via-gradient-red to-gradient-orange1 p-1 hover:scale-105 duration-300">
+        <a href='https://comfy-store-xaft.onrender.com' target="_blank" className="sm:h-72 rounded-md bg-gradient-to-r from-gradient-purple via-gradient-red to-gradient-orange1 p-1 hover:scale-105 duration-300">
           <div className="rounded-md flex flex-col h-full w-full  bg-bg-dark p-2">
             <div className='bg-white/5 size-14 flex items-center justify-center p-2  rounded-md '>
               <img src={comfyStore} alt="app logo" />
@@ -92,7 +93,7 @@ export function Projects() {
             </div>
           </div>
         </a>
-        <a href='https://weather-app-lovat-eight-87.vercel.app/' target="_blank" className="sm:h-72 sm:w-96 rounded-md bg-gradient-to-r from-gradient-purple via-gradient-red to-gradient-orange1 p-1 hover:scale-105 duration-300">
+        <a href='https://weather-app-lovat-eight-87.vercel.app/' target="_blank" className="sm:h-72 rounded-md bg-gradient-to-r from-gradient-purple via-gradient-red to-gradient-orange1 p-1 hover:scale-105 duration-300">
           <div className="rounded-md flex flex-col h-full w-full  bg-bg-dark p-2">
             <div className='bg-white/5 size-14 flex items-center justify-center p-2  rounded-md '>
               <img src={weatherApp} alt="app logo" />
@@ -118,7 +119,7 @@ export function Projects() {
             </div>
           </div>
         </a>
-        <a href='https://globetrek.vercel.app/' target="_blank" className="sm:h-72 sm:w-96 rounded-md bg-gradient-to-r from-gradient-purple via-gradient-red to-gradient-orange1 p-1 hover:scale-105 duration-300">
+        <a href='https://globetrek.vercel.app/' target="_blank" className="sm:h-72  rounded-md bg-gradient-to-r from-gradient-purple via-gradient-red to-gradient-orange1 p-1 hover:scale-105 duration-300">
           <div className="rounded-md flex flex-col h-full w-full  bg-bg-dark p-2">
             <div className='bg-white/5 size-14 flex items-center justify-center p-2  rounded-md '>
               <img src={globeTrek} alt="app logo" />
@@ -134,6 +135,32 @@ export function Projects() {
               </div>
               <div className='bg-white/5 p-1 rounded-md'>
                 <span>scss</span>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a href='https://country-explorer2210.netlify.app/' target="_blank" className="col-span-2 sm:h-72  rounded-md bg-gradient-to-r from-gradient-purple via-gradient-red to-gradient-orange1 p-1 hover:scale-105 duration-300">
+          <div className="rounded-md flex flex-col h-full w-full  bg-bg-dark p-2">
+            <div className='bg-white/5 size-14 flex items-center justify-center p-2  rounded-md '>
+              <img src={countryExplorer} alt="app logo" />
+            </div>
+            <div className='flex items-center mt-2 text-white gap-2'>
+              <h1 className=" capitalize ">country Explorer</h1>
+              <FaLink className='text-lg' />
+            </div>
+            <p className='text-gray text-sm mt-4'>🌐 Country Explorer is a web application that integrates with the REST Countries API to pull and display country data. Users can view all countries, search for specific countries, filter by region, and view detailed information about each country, The application supports responsive design for various screen sizes and includes a light/dark mode toggle.</p>
+            <div className='flex flex-wrap text-white text-sm gap-3 mt-4 sm:mt-auto capitalize items-center'>
+              <div className='bg-white/5 p-1 rounded-md'>
+                <span>react</span>
+              </div>
+              <div className='bg-white/5 p-1 rounded-md'>
+                <span>react query</span>
+              </div>
+              <div className='bg-white/5 p-1 rounded-md'>
+                <span>T.S</span>
+              </div>
+              <div className='bg-white/5 p-1 rounded-md'>
+                <span>Tailwind</span>
               </div>
             </div>
           </div>
