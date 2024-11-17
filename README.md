@@ -22,7 +22,7 @@ Feel free to reach out to me on:
 
 * Email: amiryankolovich2000@gmail.com
 * LinkedIn: https://www.linkedin.com/in/amir-yankolovich/
-* phone number: 0542479739
+* Phone number: 0542479739
 
 **I'm always open to collaborating on exciting projects!**
 
