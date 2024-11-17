@@ -1,4 +1,5 @@
- Full-Stack /  Front-End Developer
+Amir Yankolovich
+Full-Stack /  Front-End Developer
 
  Live Portfolio Website : https://portfolio-opal-zeta-65.vercel.app/
 
@@ -21,6 +22,7 @@ Feel free to reach out to me on:
 
 * Email: amiryankolovich2000@gmail.com
 * LinkedIn: https://www.linkedin.com/in/amir-yankolovich/
+* phone number: 0542479739
 
 **I'm always open to collaborating on exciting projects!**
 
