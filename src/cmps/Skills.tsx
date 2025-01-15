@@ -9,6 +9,8 @@ import tailwind from '../assets/imgs/tailwind.png'
 import redux from '../assets/imgs/redux.png'
 import node from '../assets/imgs/node.png'
 import mongo from '../assets/imgs/mongo.png'
+import firebase from '../assets/imgs/firebase.png'
+import nextjs from '../assets/imgs/nextjs.png'
 export function Skills() {
 
   const fadeInAnimations = {
@@ -35,7 +37,7 @@ export function Skills() {
       }}
     >
       <h1 className='capitalize text-2xl gradient-text text-center font-semibold my-4'>my skills:</h1>
-      <div className='grid grid-cols-2 sm:grid-cols-5 sm:gap-3 place-items-center mt-8'>
+      <div className='grid grid-cols-2 sm:grid-cols-4 sm:gap-3 place-items-center mt-8'>
         <div className='sm:p-4'>
           <img className='size-14' src={js} alt="js logo" />
         </div>
@@ -65,6 +67,12 @@ export function Skills() {
         </div>
         <div className='p-2 sm:p-4'>
           <img className='size-14' src={mongo} alt="mongo logo" />
+        </div>
+        <div className='p-2 sm:p-4'>
+          <img className='size-14' src={firebase} alt="firebase logo" />
+        </div>
+        <div className='p-2 sm:p-4'>
+          <img className='size-14' src={nextjs} alt="nextjs logo" />
         </div>
       </div>
     </motion.section>

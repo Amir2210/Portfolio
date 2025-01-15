@@ -1,5 +1,6 @@
 import { FaLink } from "react-icons/fa"
 import { motion } from "framer-motion"
+import toystore from '../assets/imgs/favicon.ico'
 import jonTracker from '../assets/imgs/jobtracker.png'
 import comfyStore from '../assets/imgs/comfystore.png'
 import weatherApp from '../assets/imgs/weather.png'
@@ -10,6 +11,7 @@ import comfyScreenShot from '../assets/projectScreenshots/comfyScreenShot.png'
 import weatherAppScreenshot from '../assets/projectScreenshots/weatherAppScreenshot.png'
 import globeTrekScreenshot from '../assets/projectScreenshots/globeTrekScreenshot.png'
 import countryExplorerScreenshot from '../assets/projectScreenshots/countryExplorerScreenshot.png'
+import toyStoreScreenShot from '../assets/projectScreenshots/toystore.png'
 import { useEffect, useState } from 'react'
 export function Projects() {
   const [isFlipped, setIsFlipped] = useState(false)
@@ -185,7 +187,7 @@ export function Projects() {
             </div>
           </div>
         </a>
-        <a href='https://country-explorer2210.netlify.app/' target="_blank" className="card-container col-span-2">
+        <a href='https://country-explorer2210.netlify.app/' target="_blank" className="card-container">
           <div className={`card ${isFlipped ? 'flipped' : ''} `}>
             <div className="card-front colorful-outline">
               <div className="rounded-md flex flex-col h-full w-full  bg-bg-dark p-2">
@@ -216,6 +218,40 @@ export function Projects() {
             {/* Back Side */}
             <div className="card-back ">
               <img src={countryExplorerScreenshot} alt="Country Explorer preview" className="w-full h-full object-cover rounded-md" />
+            </div>
+          </div>
+        </a>
+        <a href='https://toystore-sigma.vercel.app/' target="_blank" className="card-container">
+          <div className={`card ${isFlipped ? 'flipped' : ''} `}>
+            <div className="card-front colorful-outline">
+              <div className="rounded-md flex flex-col h-full w-full  bg-bg-dark p-2">
+                <div className='bg-white/5 size-14 flex items-center justify-center p-2  rounded-md '>
+                  <img src={toystore} alt="app logo" />
+                </div>
+                <div className='flex items-center mt-2 text-white gap-2'>
+                  <h1 className="capitalize ">ToyStore</h1>
+                  <FaLink className='text-lg' />
+                </div>
+                <p className='text-gray text-sm mt-4'>🧸 ToyStore is a Firestore-based toy management application where users can add, edit, delete, and filter toys.</p>
+                <div className='flex flex-wrap text-white text-sm gap-3 mt-4 sm:mt-auto capitalize items-center'>
+                  <div className='bg-white/5 p-1 rounded-md'>
+                    <span>react</span>
+                  </div>
+                  <div className='bg-white/5 p-1 rounded-md'>
+                    <span>React Context API</span>
+                  </div>
+                  <div className='bg-white/5 p-1 rounded-md'>
+                    <span>Firebase</span>
+                  </div>
+                  <div className='bg-white/5 p-1 rounded-md'>
+                    <span>Tailwind</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* Back Side */}
+            <div className="card-back ">
+              <img src={toyStoreScreenShot} alt="ToyStore preview" className="w-full h-full object-cover rounded-md" />
             </div>
           </div>
         </a>
