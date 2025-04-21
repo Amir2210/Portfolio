@@ -12,12 +12,7 @@ import weatherAppScreenshot from '../assets/projectScreenshots/weatherAppScreens
 import globeTrekScreenshot from '../assets/projectScreenshots/globeTrekScreenshot.png'
 import countryExplorerScreenshot from '../assets/projectScreenshots/countryExplorerScreenshot.png'
 import toyStoreScreenShot from '../assets/projectScreenshots/toystore.png'
-import { useEffect, useState } from 'react'
 export function Projects() {
-  const [isFlipped, setIsFlipped] = useState(false)
-  const [isCard2Flipped, setIsCard2Flipped] = useState(false)
-
-
 
   const fadeInAnimations = {
     initial: {
