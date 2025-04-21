@@ -17,18 +17,7 @@ export function Projects() {
   const [isFlipped, setIsFlipped] = useState(false)
   const [isCard2Flipped, setIsCard2Flipped] = useState(false)
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIsFlipped(prev => !prev)
-    }, 3000)
-    const interval2 = setInterval(() => {
-      setIsCard2Flipped(prev => !prev)
-    }, 6000)
-    return () => {
-      clearInterval(interval)
-      clearInterval(interval2)
-    }
-  }, []);
+
 
   const fadeInAnimations = {
     initial: {
@@ -55,8 +44,8 @@ export function Projects() {
     >
       <h1 className='gradient-text text-center capitalize text-3xl tracking-wider font-semibold my-4'>projects</h1>
       <div className='flex flex-col sm:grid sm:grid-cols-2 gap-5 mt-8'>
-        <a href='https://jobtracker-x1u9.onrender.com/' target="_blank" className="card-container">
-          <div className={`card ${isFlipped ? 'flipped' : ''} `}>
+        <a href='https://jobtracker-x1u9.onrender.com/' target="_blank" className="card-container group group">
+          <div className="card group-hover:flipped">
             {/* Front Side */}
             <div className="card-front colorful-outline">
               <div className="rounded-md flex flex-col h-full w-full bg-bg-dark p-2">
@@ -87,8 +76,8 @@ export function Projects() {
           </div>
         </a>
 
-        <a href='https://comfy-store-xaft.onrender.com' target="_blank" className="card-container">
-          <div className={`card ${isCard2Flipped ? 'flipped' : ''} `}>
+        <a href='https://comfy-store-xaft.onrender.com' target="_blank" className="card-container group">
+          <div className="card group-hover:flipped">
             {/* Front Side */}
             <div className="card-front colorful-outline">
               <div className="rounded-md flex flex-col h-full w-full  bg-bg-dark p-2">
@@ -124,8 +113,8 @@ export function Projects() {
             </div>
           </div>
         </a>
-        <a href='https://weather-app-lovat-eight-87.vercel.app/' target="_blank" className="card-container">
-          <div className={`card ${isCard2Flipped ? 'flipped' : ''} `}>
+        <a href='https://weather-app-lovat-eight-87.vercel.app/' target="_blank" className="card-container group">
+          <div className="card group-hover:flipped">
             {/* Front Side */}
             <div className="card-front colorful-outline">
               <div className="rounded-md flex flex-col h-full w-full  bg-bg-dark p-2">
@@ -159,8 +148,8 @@ export function Projects() {
             </div>
           </div>
         </a>
-        <a href='https://globetrek.vercel.app/' target="_blank" className="card-container">
-          <div className={`card ${isFlipped ? 'flipped' : ''} `}>
+        <a href='https://globetrek.vercel.app/' target="_blank" className="card-container group">
+          <div className="card group-hover:flipped">
             <div className="card-front colorful-outline">
               <div className="rounded-md flex flex-col h-full w-full  bg-bg-dark p-2">
                 <div className='bg-white/5 size-14 flex items-center justify-center p-2  rounded-md '>
@@ -187,8 +176,8 @@ export function Projects() {
             </div>
           </div>
         </a>
-        <a href='https://country-explorer2210.netlify.app/' target="_blank" className="card-container">
-          <div className={`card ${isFlipped ? 'flipped' : ''} `}>
+        <a href='https://country-explorer2210.netlify.app/' target="_blank" className="card-container group">
+          <div className="card group-hover:flipped">
             <div className="card-front colorful-outline">
               <div className="rounded-md flex flex-col h-full w-full  bg-bg-dark p-2">
                 <div className='bg-white/5 size-14 flex items-center justify-center p-2  rounded-md '>
@@ -221,8 +210,8 @@ export function Projects() {
             </div>
           </div>
         </a>
-        <a href='https://toystore-sigma.vercel.app/' target="_blank" className="card-container">
-          <div className={`card ${isFlipped ? 'flipped' : ''} `}>
+        <a href='https://toystore-sigma.vercel.app/' target="_blank" className="card-container group">
+          <div className="card group-hover:flipped">
             <div className="card-front colorful-outline">
               <div className="rounded-md flex flex-col h-full w-full  bg-bg-dark p-2">
                 <div className='bg-white/5 size-14 flex items-center justify-center p-2  rounded-md '>

@@ -49,7 +49,7 @@ html {
   transition: transform 0.8s ease-in-out;
 }
 
-.card.flipped {
+.group:hover .card {
   transform: rotateY(180deg);
 }
 
