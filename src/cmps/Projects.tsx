@@ -33,6 +33,7 @@ export function Projects() {
     }
   }
 
+
   return (
     <motion.section className='align-elemets mt-12' id='projects'
       variants={fadeInAnimations}
