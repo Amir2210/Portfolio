@@ -1,4 +1,4 @@
-import { FaLink } from "react-icons/fa"
+import { FaExternalLinkAlt } from "react-icons/fa"
 import { motion } from "framer-motion"
 import toystore from '../assets/imgs/favicon.ico'
 import jonTracker from '../assets/imgs/jobtracker.png'
@@ -13,236 +13,144 @@ import globeTrekScreenshot from '../assets/projectScreenshots/globeTrekScreensho
 import countryExplorerScreenshot from '../assets/projectScreenshots/countryExplorerScreenshot.png'
 import toyStoreScreenShot from '../assets/projectScreenshots/toystore.png'
 
-export function Projects() {
+const projects = [
+  {
+    name: "JobTracker",
+    description: "Job Tracker streamlines your job search by efficiently organizing a watch list. Easily manage the jobs you've applied for.",
+    icon: jonTracker,
+    screenshot: jobTrackerScreenShot,
+    link: "https://jobtracker-x1u9.onrender.com/",
+    tech: ["React", "TypeScript", "Node.js", "Express", "MongoDB", "Tailwind"]
+  },
+  {
+    name: "ComfyStore",
+    description: "ComfyStore offers stylish furniture for every room. Shop and customize your perfect pieces with ease.",
+    icon: comfyStore,
+    screenshot: comfyScreenShot,
+    link: "https://comfy-store-xaft.onrender.com",
+    tech: ["React", "Node.js", "Express", "MongoDB", "Tailwind"]
+  },
+  {
+    name: "Weather App",
+    description: "Weather application that provides current weather data and a 7-day forecast for any city with detailed information.",
+    icon: weatherApp,
+    screenshot: weatherAppScreenshot,
+    link: "https://weather-app-lovat-eight-87.vercel.app/",
+    tech: ["React", "Next.js", "TypeScript", "Tailwind"]
+  },
+  {
+    name: "GlobeTrek",
+    description: "GlobeTrek helps users plan and discover their next adventure trek with detailed destination information.",
+    icon: globeTrek,
+    screenshot: globeTrekScreenshot,
+    link: "https://globetrek.vercel.app/",
+    tech: ["React", "SCSS"]
+  },
+  {
+    name: "Country Explorer",
+    description: "Web application that integrates with the REST Countries API to display and filter country data.",
+    icon: countryExplorer,
+    screenshot: countryExplorerScreenshot,
+    link: "https://country-explorer2210.netlify.app/",
+    tech: ["React", "React Query", "TypeScript", "Tailwind"]
+  },
+  {
+    name: "ToyStore",
+    description: "Firestore-based toy management application where users can add, edit, delete, and filter toys.",
+    icon: toystore,
+    screenshot: toyStoreScreenShot,
+    link: "https://toystore-sigma.vercel.app/",
+    tech: ["React", "Context API", "Firebase", "Tailwind"]
+  }
+]
 
-  const fadeInAnimations = {
-    initial: {
-      opacity: 0,
-      x: -200
-    },
+export function Projects() {
+  const containerVariants = {
+    initial: { opacity: 0 },
     animate: {
       opacity: 1,
-      x: 0,
-      transition: {
-        delay: 0.8
-      }
+      transition: { staggerChildren: 0.15 }
     }
   }
 
+  const itemVariants = {
+    initial: { opacity: 0, y: 30 },
+    animate: { 
+      opacity: 1, 
+      y: 0,
+      transition: { duration: 0.5 }
+    }
+  }
 
   return (
-    <motion.section className='align-elemets mt-12' id='projects'
-      variants={fadeInAnimations}
+    <motion.section 
+      className='align-elemets py-16' 
+      id='projects'
+      variants={containerVariants}
       initial="initial"
       whileInView="animate"
-      viewport={{
-        once: true
-      }}
+      viewport={{ once: true }}
     >
-      <h1 className='gradient-text text-center capitalize text-3xl tracking-wider font-semibold my-4'>projects</h1>
-      <div className='flex flex-col sm:grid sm:grid-cols-2 gap-5 mt-8'>
-        <a href='https://jobtracker-x1u9.onrender.com/' target="_blank" className="card-container group group">
-          <div className="card group-hover:flipped">
-            {/* Front Side */}
-            <div className="card-front colorful-outline">
-              <div className="rounded-md flex flex-col h-full w-full bg-bg-dark p-2">
-                <div className="bg-white/5 size-14 flex items-center justify-center rounded-md">
-                  <img src={jonTracker} alt="app logo" />
+      <h2 className='text-2xl sm:text-3xl font-semibold text-center mb-12'>
+        <span className="gradient-text">Projects</span>
+      </h2>
+      
+      <div className='grid sm:grid-cols-2 gap-6'>
+        {projects.map((project, index) => (
+          <motion.a 
+            key={index}
+            href={project.link} 
+            target="_blank"
+            variants={itemVariants}
+            className="group relative overflow-hidden backdrop-blur-md bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-white/20 transition-all duration-500"
+            whileHover={{ y: -5 }}
+          >
+            {/* Project Content */}
+            <div className="relative z-10">
+              {/* Header */}
+              <div className="flex items-start justify-between mb-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center p-2">
+                    <img src={project.icon} alt={project.name} className="w-full h-full object-contain" />
+                  </div>
+                  <div>
+                    <h3 className="text-white font-semibold text-lg flex items-center gap-2">
+                      {project.name}
+                      <FaExternalLinkAlt className="text-xs text-white/40 group-hover:text-white/80 transition-colors" />
+                    </h3>
+                  </div>
                 </div>
-                <div className="flex items-center mt-2 text-white gap-2">
-                  <h1 className="capitalize">jobTracker</h1>
-                  <FaLink className="text-lg" />
-                </div>
-                <p className="text-gray text-sm mt-4">
-                  📰 Job Tracker streamlines your job search by efficiently organizing a watch list. Easily manage the jobs you've applied for.
-                </p>
-                <div className="flex flex-wrap text-white text-sm gap-3 mt-4 sm:mt-auto capitalize items-center">
-                  {['react', 't.S', 'node.js', 'express.js', 'mongoDB', 'tailwind'].map((tech, index) => (
-                    <div key={index} className="bg-white/5 p-1 rounded-md">
-                      <span>{tech}</span>
-                    </div>
-                  ))}
-                </div>
+              </div>
+              
+              {/* Description */}
+              <p className="text-white/60 text-sm leading-relaxed mb-4">
+                {project.description}
+              </p>
+              
+              {/* Tech Stack */}
+              <div className="flex flex-wrap gap-2">
+                {project.tech.map((tech, techIndex) => (
+                  <span 
+                    key={techIndex}
+                    className="px-3 py-1 text-xs rounded-full bg-white/10 text-white/70 border border-white/10"
+                  >
+                    {tech}
+                  </span>
+                ))}
               </div>
             </div>
 
-            {/* Back Side */}
-            <div className="card-back">
-              <img src={jobTrackerScreenShot} alt="Job Tracker preview" className="w-full h-full object-cover rounded-md" />
+            {/* Hover Preview Image */}
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500">
+              <img 
+                src={project.screenshot} 
+                alt={project.name} 
+                className="w-full h-full object-cover"
+              />
             </div>
-          </div>
-        </a>
-
-        <a href='https://comfy-store-xaft.onrender.com' target="_blank" className="card-container group">
-          <div className="card group-hover:flipped">
-            {/* Front Side */}
-            <div className="card-front colorful-outline">
-              <div className="rounded-md flex flex-col h-full w-full  bg-bg-dark p-2">
-                <div className='bg-white/5 size-14 flex items-center justify-center p-2  rounded-md '>
-                  <img src={comfyStore} alt="app logo" />
-                </div>
-                <div className='flex items-center mt-2 text-white gap-2'>
-                  <h1 className=" capitalize ">comfyStore</h1>
-                  <FaLink className='text-lg' />
-                </div>
-                <p className='text-gray text-sm mt-4'>🪑 ComfyStore  offers stylish furniture for every room. Shop and customize your perfect pieces with ease.</p>
-                <div className='flex flex-wrap text-white text-sm gap-3 mt-4 sm:mt-auto capitalize items-center'>
-                  <div className='bg-white/5 p-1 rounded-md'>
-                    <span>react</span>
-                  </div>
-                  <div className='bg-white/5 p-1 rounded-md'>
-                    <span>node.js</span>
-                  </div>
-                  <div className='bg-white/5 p-1 rounded-md'>
-                    <span>express.js</span>
-                  </div>
-                  <div className='bg-white/5 p-1 rounded-md'>
-                    <span>mongoDB</span>
-                  </div>
-                  <div className='bg-white/5 p-1 rounded-md'>
-                    <span>tailwind</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="card-back">
-              <img src={comfyScreenShot} alt="comfy store preview" className="w-full h-full object-cover rounded-md" />
-            </div>
-          </div>
-        </a>
-        <a href='https://weather-app-lovat-eight-87.vercel.app/' target="_blank" className="card-container group">
-          <div className="card group-hover:flipped">
-            {/* Front Side */}
-            <div className="card-front colorful-outline">
-              <div className="rounded-md flex flex-col h-full w-full  bg-bg-dark p-2">
-                <div className='bg-white/5 size-14 flex items-center justify-center p-2  rounded-md '>
-                  <img src={weatherApp} alt="app logo" />
-                </div>
-                <div className='flex items-center mt-2 text-white gap-2'>
-                  <h1 className=" capitalize ">weather app</h1>
-                  <FaLink className='text-lg' />
-                </div>
-                <p className='text-gray text-sm mt-4'>🌞 weather application that provides current weather data and a 7-day forecast for any city. It allows users to search for a city and get detailed weather information including temperature, humidity, wind speed, and more.</p>
-                <div className='flex flex-wrap text-white text-sm gap-3 mt-4 sm:mt-auto capitalize items-center'>
-                  <div className='bg-white/5 p-1 rounded-md'>
-                    <span>react</span>
-                  </div>
-                  <div className='bg-white/5 p-1 rounded-md'>
-                    <span>next.js</span>
-                  </div>
-                  <div className='bg-white/5 p-1 rounded-md'>
-                    <span>T.S</span>
-                  </div>
-                  <div className='bg-white/5 p-1 rounded-md'>
-                    <span>tailwind</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* Back Side */}
-            <div className="card-back">
-              <img src={weatherAppScreenshot} alt="weather App preview" className="w-full h-full object-cover rounded-md" />
-            </div>
-          </div>
-        </a>
-        <a href='https://globetrek.vercel.app/' target="_blank" className="card-container group">
-          <div className="card group-hover:flipped">
-            <div className="card-front colorful-outline">
-              <div className="rounded-md flex flex-col h-full w-full  bg-bg-dark p-2">
-                <div className='bg-white/5 size-14 flex items-center justify-center p-2  rounded-md '>
-                  <img src={globeTrek} alt="app logo" />
-                </div>
-                <div className='flex items-center mt-2 text-white gap-2'>
-                  <h1 className=" capitalize ">globeTrek</h1>
-                  <FaLink className='text-lg' />
-                </div>
-                <p className='text-gray text-sm mt-4'>🌎 GlobeTrek app designed to help users plan and discover their next adventure trek. Users can explore various destinations, view details about each trek, and access helpful resources for planning their journey.</p>
-                <div className='flex flex-wrap text-white text-sm gap-3 mt-4 sm:mt-auto capitalize items-center'>
-                  <div className='bg-white/5 p-1 rounded-md'>
-                    <span>react</span>
-                  </div>
-                  <div className='bg-white/5 p-1 rounded-md'>
-                    <span>scss</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* Back Side */}
-            <div className="card-back ">
-              <img src={globeTrekScreenshot} alt="GlobTrek preview" className="w-full h-full object-cover rounded-md" />
-            </div>
-          </div>
-        </a>
-        <a href='https://country-explorer2210.netlify.app/' target="_blank" className="card-container group">
-          <div className="card group-hover:flipped">
-            <div className="card-front colorful-outline">
-              <div className="rounded-md flex flex-col h-full w-full  bg-bg-dark p-2">
-                <div className='bg-white/5 size-14 flex items-center justify-center p-2  rounded-md '>
-                  <img src={countryExplorer} alt="app logo" />
-                </div>
-                <div className='flex items-center mt-2 text-white gap-2'>
-                  <h1 className=" capitalize ">country Explorer</h1>
-                  <FaLink className='text-lg' />
-                </div>
-                <p className='text-gray text-sm mt-4'>🌐 Country Explorer is a web application that integrates with the REST Countries API to pull and display country data. Users can view all countries, search for specific countries, filter by region, and view detailed information about each country.</p>
-                <div className='flex flex-wrap text-white text-sm gap-3 mt-4 sm:mt-auto capitalize items-center'>
-                  <div className='bg-white/5 p-1 rounded-md'>
-                    <span>react</span>
-                  </div>
-                  <div className='bg-white/5 p-1 rounded-md'>
-                    <span>react query</span>
-                  </div>
-                  <div className='bg-white/5 p-1 rounded-md'>
-                    <span>T.S</span>
-                  </div>
-                  <div className='bg-white/5 p-1 rounded-md'>
-                    <span>Tailwind</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* Back Side */}
-            <div className="card-back ">
-              <img src={countryExplorerScreenshot} alt="Country Explorer preview" className="w-full h-full object-cover rounded-md" />
-            </div>
-          </div>
-        </a>
-        <a href='https://toystore-sigma.vercel.app/' target="_blank" className="card-container group">
-          <div className="card group-hover:flipped">
-            <div className="card-front colorful-outline">
-              <div className="rounded-md flex flex-col h-full w-full  bg-bg-dark p-2">
-                <div className='bg-white/5 size-14 flex items-center justify-center p-2  rounded-md '>
-                  <img src={toystore} alt="app logo" />
-                </div>
-                <div className='flex items-center mt-2 text-white gap-2'>
-                  <h1 className="capitalize ">ToyStore</h1>
-                  <FaLink className='text-lg' />
-                </div>
-                <p className='text-gray text-sm mt-4'>🧸 ToyStore is a Firestore-based toy management application where users can add, edit, delete, and filter toys.</p>
-                <div className='flex flex-wrap text-white text-sm gap-3 mt-4 sm:mt-auto capitalize items-center'>
-                  <div className='bg-white/5 p-1 rounded-md'>
-                    <span>react</span>
-                  </div>
-                  <div className='bg-white/5 p-1 rounded-md'>
-                    <span>React Context API</span>
-                  </div>
-                  <div className='bg-white/5 p-1 rounded-md'>
-                    <span>Firebase</span>
-                  </div>
-                  <div className='bg-white/5 p-1 rounded-md'>
-                    <span>Tailwind</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* Back Side */}
-            <div className="card-back ">
-              <img src={toyStoreScreenShot} alt="ToyStore preview" className="w-full h-full object-cover rounded-md" />
-            </div>
-          </div>
-        </a>
+          </motion.a>
+        ))}
       </div>
-
     </motion.section>
   )
 }

@@ -11,68 +11,70 @@ import node from '../assets/imgs/node.png'
 import mongo from '../assets/imgs/mongo.png'
 import firebase from '../assets/imgs/firebase.png'
 import nextjs from '../assets/imgs/nextjs.png'
-export function Skills() {
 
-  const fadeInAnimations = {
-    initial: {
-      opacity: 0,
-      x: 200
-    },
+const skills = [
+  { img: js, alt: "JavaScript" },
+  { img: css, alt: "CSS" },
+  { img: html, alt: "HTML" },
+  { img: ts, alt: "TypeScript" },
+  { img: react, alt: "React" },
+  { img: sass, alt: "Sass" },
+  { img: tailwind, alt: "Tailwind" },
+  { img: redux, alt: "Redux" },
+  { img: node, alt: "Node.js" },
+  { img: mongo, alt: "MongoDB" },
+  { img: firebase, alt: "Firebase" },
+  { img: nextjs, alt: "Next.js" },
+]
+
+export function Skills() {
+  const containerVariants = {
+    initial: { opacity: 0 },
     animate: {
       opacity: 1,
-      x: 0,
       transition: {
-        delay: 0.8
+        staggerChildren: 0.1
       }
     }
   }
 
+  const itemVariants = {
+    initial: { opacity: 0, y: 20 },
+    animate: { 
+      opacity: 1, 
+      y: 0,
+      transition: { duration: 0.4 }
+    }
+  }
+
   return (
-    <motion.section className='align-elemets px-4 py-2 mt-12'
-      variants={fadeInAnimations}
+    <motion.section 
+      className='align-elemets py-16'
+      variants={containerVariants}
       initial="initial"
       whileInView="animate"
-      viewport={{
-        once: true
-      }}
+      viewport={{ once: true }}
     >
-      <h1 className='capitalize text-2xl gradient-text text-center font-semibold my-4'>my skills:</h1>
-      <div className='grid grid-cols-2 sm:grid-cols-4 sm:gap-3 place-items-center mt-8'>
-        <div className='sm:p-4'>
-          <img className='size-14' src={js} alt="js logo" />
-        </div>
-        <div className='p-2 sm:p-4'>
-          <img className='size-14' src={css} alt="css logo" />
-        </div>
-        <div className='p-2 sm:p-4'>
-          <img className='size-14' src={html} alt="html logo" />
-        </div>
-        <div className='p-2 sm:p-4'>
-          <img className='size-14' src={ts} alt="ts logo" />
-        </div>
-        <div className='p-2 sm:p-4'>
-          <img className='size-14' src={react} alt="react logo" />
-        </div>
-        <div className='p-2 sm:p-4'>
-          <img className='size-14' src={sass} alt="sass logo" />
-        </div>
-        <div className='p-2 sm:p-4'>
-          <img className='size-14' src={tailwind} alt="tailwind logo" />
-        </div >
-        <div className='p-2 sm:p-4'>
-          <img className='size-14' src={redux} alt="redux logo" />
-        </div>
-        <div className='p-2 sm:p-4'>
-          <img className='size-14' src={node} alt="node logo" />
-        </div>
-        <div className='p-2 sm:p-4'>
-          <img className='size-14' src={mongo} alt="mongo logo" />
-        </div>
-        <div className='p-2 sm:p-4'>
-          <img className='size-14' src={firebase} alt="firebase logo" />
-        </div>
-        <div className='p-2 sm:p-4'>
-          <img className='size-14' src={nextjs} alt="nextjs logo" />
+      <h2 className='text-2xl sm:text-3xl font-semibold text-center mb-12'>
+        <span className="gradient-text">My Skills</span>
+      </h2>
+      
+      <div className="backdrop-blur-md bg-white/5 border border-white/10 rounded-3xl p-8">
+        <div className='grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6 place-items-center'>
+          {skills.map((skill, index) => (
+            <motion.div 
+              key={index}
+              variants={itemVariants}
+              className='group p-4 rounded-2xl hover:bg-white/10 transition-all duration-300 cursor-pointer'
+              whileHover={{ scale: 1.1 }}
+            >
+              <img 
+                className='w-12 h-12 sm:w-14 sm:h-14 object-contain group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.3)] transition-all duration-300' 
+                src={skill.img} 
+                alt={skill.alt} 
+              />
+            </motion.div>
+          ))}
         </div>
       </div>
     </motion.section>
