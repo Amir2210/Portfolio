@@ -55,11 +55,11 @@ export function Skills() {
       whileInView="animate"
       viewport={{ once: true }}
     >
-      <h2 className='text-2xl sm:text-3xl font-semibold text-center mb-12'>
+      <h2 className='text-2xl sm:text-3xl font-semibold text-center mb-12 drop-shadow-lg'>
         <span className="gradient-text">My Skills</span>
       </h2>
       
-      <div className="backdrop-blur-md bg-white/5 border border-white/10 rounded-3xl p-8">
+      <div className="backdrop-blur-xl bg-black/40 border border-white/20 rounded-3xl p-8 shadow-2xl">
         <div className='grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6 place-items-center'>
           {skills.map((skill, index) => (
             <motion.div 

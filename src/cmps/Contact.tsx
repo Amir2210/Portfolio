@@ -51,11 +51,11 @@ export function Contact() {
       whileInView="animate"
       viewport={{ once: true }}
     >
-      <h2 className='text-2xl sm:text-3xl font-semibold text-center mb-4'>
+      <h2 className='text-2xl sm:text-3xl font-semibold text-center mb-4 drop-shadow-lg'>
         <span className="gradient-text">Get In Touch</span>
       </h2>
       
-      <p className="text-white/60 text-center mb-8 max-w-md mx-auto">
+      <p className="text-white/90 text-center mb-8 max-w-md mx-auto drop-shadow-sm">
         Have a project in mind or just want to say hi? Feel free to reach out!
       </p>
 
@@ -64,14 +64,14 @@ export function Contact() {
         <a 
           href="https://www.linkedin.com/in/amir-yankolovich/" 
           target="_blank"
-          className="p-3 backdrop-blur-md bg-white/5 border border-white/10 rounded-full text-white/70 hover:bg-white/10 hover:text-white hover:border-white/20 transition-all duration-300"
+          className="p-3 backdrop-blur-xl bg-black/40 border border-white/20 rounded-full text-white hover:bg-black/50 hover:border-white/30 transition-all duration-300 shadow-lg"
         >
           <FaLinkedin className='text-xl' />
         </a>
         <a 
           href="https://github.com/Amir2210" 
           target="_blank"
-          className="p-3 backdrop-blur-md bg-white/5 border border-white/10 rounded-full text-white/70 hover:bg-white/10 hover:text-white hover:border-white/20 transition-all duration-300"
+          className="p-3 backdrop-blur-xl bg-black/40 border border-white/20 rounded-full text-white hover:bg-black/50 hover:border-white/30 transition-all duration-300 shadow-lg"
         >
           <FaGithub className='text-xl' />
         </a>
@@ -82,7 +82,7 @@ export function Contact() {
         <form 
           ref={form} 
           onSubmit={sendEmail}
-          className="backdrop-blur-md bg-white/5 border border-white/10 rounded-3xl p-8"
+          className="backdrop-blur-xl bg-black/50 border border-white/20 rounded-3xl p-8 shadow-2xl"
         >
           <div className="space-y-5">
             <div>
@@ -90,7 +90,7 @@ export function Contact() {
                 onChange={(ev) => setName(ev.target.value)} 
                 value={name} 
                 placeholder='Your Name' 
-                className='w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-white/30 transition-colors' 
+                className='w-full px-4 py-3 bg-black/30 border border-white/20 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-white/40 transition-colors' 
                 type="text" 
                 name="from_name" 
                 required 
@@ -101,7 +101,7 @@ export function Contact() {
                 onChange={(ev) => setEmail(ev.target.value)} 
                 value={email} 
                 placeholder='Your Email' 
-                className='w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-white/30 transition-colors' 
+                className='w-full px-4 py-3 bg-black/30 border border-white/20 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-white/40 transition-colors' 
                 type="email" 
                 name="from_email" 
                 required 
@@ -113,7 +113,7 @@ export function Contact() {
                 value={txt} 
                 placeholder='Your Message' 
                 rows={4}
-                className='w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-white/30 transition-colors resize-none' 
+                className='w-full px-4 py-3 bg-black/30 border border-white/20 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-white/40 transition-colors resize-none' 
                 name="message" 
                 required 
               />
@@ -121,7 +121,7 @@ export function Contact() {
             <button
               type="submit"
               disabled={isLoading}
-              className='w-full py-3 backdrop-blur-md bg-white/10 border border-white/20 rounded-xl text-white font-medium hover:bg-white/20 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed'
+              className='w-full py-3 backdrop-blur-xl bg-white/15 border border-white/30 rounded-xl text-white font-medium hover:bg-white/25 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg'
             >
               {isLoading ? 'Sending...' : 'Send Message'}
             </button>

@@ -91,7 +91,7 @@ export function Projects() {
       whileInView="animate"
       viewport={{ once: true }}
     >
-      <h2 className='text-2xl sm:text-3xl font-semibold text-center mb-12'>
+      <h2 className='text-2xl sm:text-3xl font-semibold text-center mb-12 drop-shadow-lg'>
         <span className="gradient-text">Projects</span>
       </h2>
       
@@ -102,7 +102,7 @@ export function Projects() {
             href={project.link} 
             target="_blank"
             variants={itemVariants}
-            className="group relative overflow-hidden backdrop-blur-md bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-white/20 transition-all duration-500"
+            className="group relative overflow-hidden backdrop-blur-xl bg-black/50 border border-white/20 rounded-2xl p-6 hover:bg-black/60 hover:border-white/30 transition-all duration-500 shadow-xl"
             whileHover={{ y: -5 }}
           >
             {/* Project Content */}
@@ -110,20 +110,20 @@ export function Projects() {
               {/* Header */}
               <div className="flex items-start justify-between mb-4">
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center p-2">
+                  <div className="w-12 h-12 rounded-xl bg-white/15 flex items-center justify-center p-2 shadow-lg">
                     <img src={project.icon} alt={project.name} className="w-full h-full object-contain" />
                   </div>
                   <div>
-                    <h3 className="text-white font-semibold text-lg flex items-center gap-2">
+                    <h3 className="text-white font-semibold text-lg flex items-center gap-2 drop-shadow-md">
                       {project.name}
-                      <FaExternalLinkAlt className="text-xs text-white/40 group-hover:text-white/80 transition-colors" />
+                      <FaExternalLinkAlt className="text-xs text-white/50 group-hover:text-white transition-colors" />
                     </h3>
                   </div>
                 </div>
               </div>
               
               {/* Description */}
-              <p className="text-white/60 text-sm leading-relaxed mb-4">
+              <p className="text-white/80 text-sm leading-relaxed mb-4">
                 {project.description}
               </p>
               
@@ -132,7 +132,7 @@ export function Projects() {
                 {project.tech.map((tech, techIndex) => (
                   <span 
                     key={techIndex}
-                    className="px-3 py-1 text-xs rounded-full bg-white/10 text-white/70 border border-white/10"
+                    className="px-3 py-1 text-xs rounded-full bg-white/15 text-white/90 border border-white/20"
                   >
                     {tech}
                   </span>

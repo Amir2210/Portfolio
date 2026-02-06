@@ -45,7 +45,7 @@ export function Certifications() {
       whileInView="animate"
       viewport={{ once: true }}
     >
-      <h2 className='text-2xl sm:text-3xl font-semibold text-center mb-12'>
+      <h2 className='text-2xl sm:text-3xl font-semibold text-center mb-12 drop-shadow-lg'>
         <span className="gradient-text">Certifications</span>
       </h2>
       
@@ -56,11 +56,11 @@ export function Certifications() {
             href={cert.file} 
             target='_blank'
             variants={itemVariants}
-            className='group flex items-center gap-3 px-5 py-3 backdrop-blur-md bg-white/5 border border-white/10 rounded-full text-white/70 hover:bg-white/10 hover:text-white hover:border-white/20 transition-all duration-300'
+            className='group flex items-center gap-3 px-5 py-3 backdrop-blur-xl bg-black/40 border border-white/20 rounded-full text-white/90 hover:bg-black/50 hover:text-white hover:border-white/30 transition-all duration-300 shadow-lg'
             whileHover={{ scale: 1.02 }}
           >
-            <span className="text-sm">{cert.name}</span>
-            <FaFilePdf className='text-lg text-white/40 group-hover:text-white/80 transition-colors' />
+            <span className="text-sm font-medium">{cert.name}</span>
+            <FaFilePdf className='text-lg text-white/60 group-hover:text-white transition-colors' />
           </motion.a>
         ))}
       </div>
