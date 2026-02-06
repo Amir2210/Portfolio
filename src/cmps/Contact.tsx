@@ -170,7 +170,7 @@ export function Contact() {
             </button>
           </div>
         </form>
-      </div>
+      </motion.div>
     </motion.section>
   )
 }
