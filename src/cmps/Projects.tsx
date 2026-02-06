@@ -12,6 +12,7 @@ import weatherAppScreenshot from '../assets/projectScreenshots/weatherAppScreens
 import globeTrekScreenshot from '../assets/projectScreenshots/globeTrekScreenshot.png'
 import countryExplorerScreenshot from '../assets/projectScreenshots/countryExplorerScreenshot.png'
 import toyStoreScreenShot from '../assets/projectScreenshots/toystore.png'
+
 export function Projects() {
 
   const fadeInAnimations = {
