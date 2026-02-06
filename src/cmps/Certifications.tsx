@@ -45,11 +45,9 @@ export function Certifications() {
       whileInView="animate"
       viewport={{ once: true }}
     >
-      <div className="inline-block w-full text-center mb-12">
-        <h2 className='inline-block text-2xl sm:text-3xl font-semibold backdrop-blur-xl bg-black/60 px-8 py-3 rounded-full border border-white/10'>
-          <span className="gradient-text">Certifications</span>
-        </h2>
-      </div>
+      <h2 className='text-2xl sm:text-3xl font-semibold text-center mb-12 drop-shadow-lg'>
+        <span className="gradient-text">Certifications</span>
+      </h2>
       
       <div className='flex flex-wrap justify-center gap-4'>
         {certifications.map((cert, index) => (
