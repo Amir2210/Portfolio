@@ -29,16 +29,26 @@ export function Projects() {
     initial: { opacity: 0 },
     animate: {
       opacity: 1,
-      transition: { staggerChildren: 0.15 }
+      transition: { staggerChildren: 0.2, delayChildren: 0.2 }
     }
   }
 
-  const itemVariants = {
-    initial: { opacity: 0, y: 30 },
+  const titleVariants = {
+    initial: { opacity: 0, y: 20 },
     animate: { 
       opacity: 1, 
       y: 0,
       transition: { duration: 0.5 }
+    }
+  }
+
+  const itemVariants = {
+    initial: { opacity: 0, y: 40, scale: 0.95 },
+    animate: { 
+      opacity: 1, 
+      y: 0,
+      scale: 1,
+      transition: { duration: 0.6, ease: "easeOut" }
     }
   }
 
@@ -49,11 +59,14 @@ export function Projects() {
       variants={containerVariants}
       initial="initial"
       whileInView="animate"
-      viewport={{ once: true }}
+      viewport={{ once: true, margin: "-100px" }}
     >
-      <h2 className='text-2xl sm:text-3xl font-semibold text-center mb-12 drop-shadow-lg'>
+      <motion.h2 
+        className='text-2xl sm:text-3xl font-semibold text-center mb-12 drop-shadow-lg'
+        variants={titleVariants}
+      >
         <span className="gradient-text">Projects</span>
-      </h2>
+      </motion.h2>
       
       <div className='grid sm:grid-cols-2 gap-6'>
         {projects.map((project, index) => (
@@ -63,7 +76,8 @@ export function Projects() {
             target="_blank"
             variants={itemVariants}
             className="group relative overflow-hidden backdrop-blur-xl bg-black/70 border border-white/20 rounded-2xl p-6 hover:bg-black/80 hover:border-white/30 transition-all duration-500 shadow-xl"
-            whileHover={{ y: -5 }}
+            whileHover={{ y: -8, scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
           >
             {/* Project Content */}
             <div className="relative z-10">

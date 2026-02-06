@@ -33,8 +33,16 @@ export function Contact() {
     }
   }
 
-  const fadeInVariants = {
-    initial: { opacity: 0, y: 30 },
+  const containerVariants = {
+    initial: { opacity: 0 },
+    animate: {
+      opacity: 1,
+      transition: { staggerChildren: 0.15, delayChildren: 0.2 }
+    }
+  }
+
+  const titleVariants = {
+    initial: { opacity: 0, y: 20 },
     animate: { 
       opacity: 1, 
       y: 0,
@@ -42,45 +50,78 @@ export function Contact() {
     }
   }
 
+  const itemVariants = {
+    initial: { opacity: 0, y: 30 },
+    animate: { 
+      opacity: 1, 
+      y: 0,
+      transition: { duration: 0.5, ease: "easeOut" }
+    }
+  }
+
+  const socialVariants = {
+    initial: { opacity: 0, scale: 0.5 },
+    animate: { 
+      opacity: 1, 
+      scale: 1,
+      transition: { duration: 0.4, ease: "backOut" }
+    }
+  }
+
   return (
     <motion.section 
       className='align-elemets py-16 pb-24' 
       id='contact'
-      variants={fadeInVariants}
+      variants={containerVariants}
       initial="initial"
       whileInView="animate"
-      viewport={{ once: true }}
+      viewport={{ once: true, margin: "-100px" }}
     >
-      <h2 className='text-2xl sm:text-3xl font-semibold text-center mb-6 drop-shadow-lg'>
+      <motion.h2 
+        className='text-2xl sm:text-3xl font-semibold text-center mb-6 drop-shadow-lg'
+        variants={titleVariants}
+      >
         <span className="gradient-text">Get In Touch</span>
-      </h2>
+      </motion.h2>
       
-      <div className="backdrop-blur-xl bg-black/60 border border-white/10 rounded-3xl p-6 max-w-md mx-auto mb-8">
+      <motion.div 
+        className="backdrop-blur-xl bg-black/60 border border-white/10 rounded-3xl p-6 max-w-md mx-auto mb-8"
+        variants={itemVariants}
+      >
         <p className="text-white text-center">
           Have a project in mind or just want to say hi? Feel free to reach out!
         </p>
-      </div>
+      </motion.div>
 
       {/* Social Links */}
-      <div className='flex justify-center items-center gap-4 mb-10'>
-        <a 
+      <motion.div 
+        className='flex justify-center items-center gap-4 mb-10'
+        variants={containerVariants}
+      >
+        <motion.a 
           href="https://www.linkedin.com/in/amir-yankolovich/" 
           target="_blank"
           className="p-3 backdrop-blur-xl bg-black/60 border border-white/20 rounded-full text-white hover:bg-black/70 hover:border-white/30 transition-all duration-300 shadow-lg"
+          variants={socialVariants}
+          whileHover={{ scale: 1.15, y: -3 }}
+          whileTap={{ scale: 0.9 }}
         >
           <FaLinkedin className='text-xl' />
-        </a>
-        <a 
+        </motion.a>
+        <motion.a 
           href="https://github.com/Amir2210" 
           target="_blank"
           className="p-3 backdrop-blur-xl bg-black/60 border border-white/20 rounded-full text-white hover:bg-black/70 hover:border-white/30 transition-all duration-300 shadow-lg"
+          variants={socialVariants}
+          whileHover={{ scale: 1.15, y: -3 }}
+          whileTap={{ scale: 0.9 }}
         >
           <FaGithub className='text-xl' />
-        </a>
-      </div>
+        </motion.a>
+      </motion.div>
 
       {/* Contact Form */}
-      <div className="max-w-md mx-auto">
+      <motion.div className="max-w-md mx-auto" variants={itemVariants}>
         <form 
           ref={form} 
           onSubmit={sendEmail}

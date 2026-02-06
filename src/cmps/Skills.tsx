@@ -33,17 +33,37 @@ export function Skills() {
     animate: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1
+        staggerChildren: 0.08,
+        delayChildren: 0.2
       }
     }
   }
 
-  const itemVariants = {
+  const titleVariants = {
     initial: { opacity: 0, y: 20 },
     animate: { 
       opacity: 1, 
       y: 0,
-      transition: { duration: 0.4 }
+      transition: { duration: 0.5 }
+    }
+  }
+
+  const cardVariants = {
+    initial: { opacity: 0, y: 40, scale: 0.95 },
+    animate: { 
+      opacity: 1, 
+      y: 0,
+      scale: 1,
+      transition: { duration: 0.6, ease: "easeOut" }
+    }
+  }
+
+  const itemVariants = {
+    initial: { opacity: 0, scale: 0.5 },
+    animate: { 
+      opacity: 1, 
+      scale: 1,
+      transition: { duration: 0.4, ease: "backOut" }
     }
   }
 
@@ -53,30 +73,37 @@ export function Skills() {
       variants={containerVariants}
       initial="initial"
       whileInView="animate"
-      viewport={{ once: true }}
+      viewport={{ once: true, margin: "-100px" }}
     >
-      <h2 className='text-2xl sm:text-3xl font-semibold text-center mb-12 drop-shadow-lg'>
+      <motion.h2 
+        className='text-2xl sm:text-3xl font-semibold text-center mb-12 drop-shadow-lg'
+        variants={titleVariants}
+      >
         <span className="gradient-text">My Skills</span>
-      </h2>
+      </motion.h2>
       
-      <div className="backdrop-blur-xl bg-black/60 border border-white/20 rounded-3xl p-8 shadow-2xl">
+      <motion.div 
+        className="backdrop-blur-xl bg-black/60 border border-white/20 rounded-3xl p-8 shadow-2xl"
+        variants={cardVariants}
+      >
         <div className='grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6 place-items-center'>
           {skills.map((skill, index) => (
             <motion.div 
               key={index}
               variants={itemVariants}
               className='group p-4 rounded-2xl hover:bg-white/10 transition-all duration-300 cursor-pointer'
-              whileHover={{ scale: 1.1 }}
+              whileHover={{ scale: 1.15, rotate: 5 }}
+              whileTap={{ scale: 0.95 }}
             >
               <img 
-                className='w-12 h-12 sm:w-14 sm:h-14 object-contain group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.3)] transition-all duration-300' 
+                className='w-12 h-12 sm:w-14 sm:h-14 object-contain group-hover:drop-shadow-[0_0_12px_rgba(255,255,255,0.4)] transition-all duration-300' 
                 src={skill.img} 
                 alt={skill.alt} 
               />
             </motion.div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </motion.section>
   )
 }

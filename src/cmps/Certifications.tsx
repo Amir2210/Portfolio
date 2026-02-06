@@ -23,16 +23,26 @@ export function Certifications() {
     initial: { opacity: 0 },
     animate: {
       opacity: 1,
-      transition: { staggerChildren: 0.1 }
+      transition: { staggerChildren: 0.08, delayChildren: 0.2 }
     }
   }
 
-  const itemVariants = {
+  const titleVariants = {
     initial: { opacity: 0, y: 20 },
     animate: { 
       opacity: 1, 
       y: 0,
-      transition: { duration: 0.4 }
+      transition: { duration: 0.5 }
+    }
+  }
+
+  const itemVariants = {
+    initial: { opacity: 0, y: 20, scale: 0.9 },
+    animate: { 
+      opacity: 1, 
+      y: 0,
+      scale: 1,
+      transition: { duration: 0.4, ease: "backOut" }
     }
   }
 
@@ -43,11 +53,14 @@ export function Certifications() {
       variants={containerVariants}
       initial="initial"
       whileInView="animate"
-      viewport={{ once: true }}
+      viewport={{ once: true, margin: "-100px" }}
     >
-      <h2 className='text-2xl sm:text-3xl font-semibold text-center mb-12 drop-shadow-lg'>
+      <motion.h2 
+        className='text-2xl sm:text-3xl font-semibold text-center mb-12 drop-shadow-lg'
+        variants={titleVariants}
+      >
         <span className="gradient-text">Certifications</span>
-      </h2>
+      </motion.h2>
       
       <div className='flex flex-wrap justify-center gap-4'>
         {certifications.map((cert, index) => (
@@ -57,7 +70,8 @@ export function Certifications() {
             target='_blank'
             variants={itemVariants}
             className='group flex items-center gap-3 px-5 py-3 backdrop-blur-xl bg-black/60 border border-white/20 rounded-full text-white hover:bg-black/70 hover:border-white/30 transition-all duration-300 shadow-lg'
-            whileHover={{ scale: 1.02 }}
+            whileHover={{ scale: 1.05, y: -3 }}
+            whileTap={{ scale: 0.95 }}
           >
             <span className="text-sm font-medium">{cert.name}</span>
             <FaFilePdf className='text-lg text-white/60 group-hover:text-white transition-colors' />

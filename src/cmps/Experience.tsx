@@ -26,16 +26,35 @@ export function Experience() {
     initial: { opacity: 0 },
     animate: {
       opacity: 1,
-      transition: { staggerChildren: 0.15 }
+      transition: { staggerChildren: 0.1, delayChildren: 0.2 }
     }
   }
 
-  const itemVariants = {
-    initial: { opacity: 0, y: 30 },
+  const titleVariants = {
+    initial: { opacity: 0, y: 20 },
     animate: { 
       opacity: 1, 
       y: 0,
       transition: { duration: 0.5 }
+    }
+  }
+
+  const cardVariants = {
+    initial: { opacity: 0, y: 50, scale: 0.95 },
+    animate: { 
+      opacity: 1, 
+      y: 0,
+      scale: 1,
+      transition: { duration: 0.6, ease: "easeOut" }
+    }
+  }
+
+  const itemVariants = {
+    initial: { opacity: 0, x: -20 },
+    animate: { 
+      opacity: 1, 
+      x: 0,
+      transition: { duration: 0.4 }
     }
   }
 
@@ -46,37 +65,46 @@ export function Experience() {
       variants={containerVariants}
       initial="initial"
       whileInView="animate"
-      viewport={{ once: true }}
+      viewport={{ once: true, margin: "-100px" }}
     >
-      <h2 className='text-2xl sm:text-3xl font-semibold text-center mb-12 drop-shadow-lg'>
+      <motion.h2 
+        className='text-2xl sm:text-3xl font-semibold text-center mb-12 drop-shadow-lg'
+        variants={titleVariants}
+      >
         <span className="gradient-text">Work Experience</span>
-      </h2>
+      </motion.h2>
       
       <div className='max-w-3xl mx-auto'>
         {experience.map((job, index) => (
           <motion.div 
             key={index}
-            variants={itemVariants}
+            variants={cardVariants}
             className="backdrop-blur-xl bg-black/70 border border-white/20 rounded-2xl p-6 sm:p-8 shadow-xl"
           >
             {/* Header */}
-            <div className="mb-6">
+            <motion.div className="mb-6" variants={containerVariants}>
               <div className="flex items-start justify-between flex-wrap gap-4">
-                <div>
+                <motion.div variants={itemVariants}>
                   <h3 className="text-xl sm:text-2xl font-bold text-white drop-shadow-md">
                     {job.title}
                   </h3>
                   <p className="text-lg text-purple-400 font-medium mt-1">
                     {job.company} · {job.type}
                   </p>
-                </div>
-                <div className="flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full">
+                </motion.div>
+                <motion.div 
+                  className="flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full"
+                  variants={itemVariants}
+                >
                   <FaBriefcase className="text-purple-400" />
                   <span className="text-white/90 text-sm font-medium">{job.duration}</span>
-                </div>
+                </motion.div>
               </div>
               
-              <div className="flex flex-wrap gap-4 mt-4 text-white/70 text-sm">
+              <motion.div 
+                className="flex flex-wrap gap-4 mt-4 text-white/70 text-sm"
+                variants={itemVariants}
+              >
                 <div className="flex items-center gap-2">
                   <FaCalendarAlt className="text-purple-400" />
                   <span>{job.period}</span>
@@ -85,23 +113,30 @@ export function Experience() {
                   <FaMapMarkerAlt className="text-purple-400" />
                   <span>{job.location}</span>
                 </div>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
 
             {/* Description */}
-            <p className="text-white/90 leading-relaxed mb-6">
+            <motion.p 
+              className="text-white/90 leading-relaxed mb-6"
+              variants={itemVariants}
+            >
               {job.description}
-            </p>
+            </motion.p>
 
             {/* Responsibilities */}
-            <ul className="space-y-3">
+            <motion.ul className="space-y-3" variants={containerVariants}>
               {job.responsibilities.map((item, idx) => (
-                <li key={idx} className="flex items-start gap-3 text-white/80 text-sm leading-relaxed">
+                <motion.li 
+                  key={idx} 
+                  className="flex items-start gap-3 text-white/80 text-sm leading-relaxed"
+                  variants={itemVariants}
+                >
                   <span className="text-purple-400 mt-1">•</span>
                   <span>{item}</span>
-                </li>
+                </motion.li>
               ))}
-            </ul>
+            </motion.ul>
           </motion.div>
         ))}
       </div>
