@@ -1,17 +1,9 @@
 import { FaExternalLinkAlt } from "react-icons/fa"
 import { motion } from "framer-motion"
-import toystore from '../assets/imgs/favicon.ico'
 import jonTracker from '../assets/imgs/jobtracker.png'
 import comfyStore from '../assets/imgs/comfystore.png'
-import weatherApp from '../assets/imgs/weather.png'
-import globeTrek from '../assets/imgs/globetrek.png'
-import countryExplorer from '../assets/imgs/israel.png'
 import jobTrackerScreenShot from '../assets/projectScreenshots/jobtrackerScreenshot.png'
 import comfyScreenShot from '../assets/projectScreenshots/comfyScreenShot.png'
-import weatherAppScreenshot from '../assets/projectScreenshots/weatherAppScreenshot.png'
-import globeTrekScreenshot from '../assets/projectScreenshots/globeTrekScreenshot.png'
-import countryExplorerScreenshot from '../assets/projectScreenshots/countryExplorerScreenshot.png'
-import toyStoreScreenShot from '../assets/projectScreenshots/toystore.png'
 
 const projects = [
   {
@@ -29,38 +21,6 @@ const projects = [
     screenshot: comfyScreenShot,
     link: "https://comfy-store-xaft.onrender.com",
     tech: ["React", "Node.js", "Express", "MongoDB", "Tailwind"]
-  },
-  {
-    name: "Weather App",
-    description: "Weather application that provides current weather data and a 7-day forecast for any city with detailed information.",
-    icon: weatherApp,
-    screenshot: weatherAppScreenshot,
-    link: "https://weather-app-lovat-eight-87.vercel.app/",
-    tech: ["React", "Next.js", "TypeScript", "Tailwind"]
-  },
-  {
-    name: "GlobeTrek",
-    description: "GlobeTrek helps users plan and discover their next adventure trek with detailed destination information.",
-    icon: globeTrek,
-    screenshot: globeTrekScreenshot,
-    link: "https://globetrek.vercel.app/",
-    tech: ["React", "SCSS"]
-  },
-  {
-    name: "Country Explorer",
-    description: "Web application that integrates with the REST Countries API to display and filter country data.",
-    icon: countryExplorer,
-    screenshot: countryExplorerScreenshot,
-    link: "https://country-explorer2210.netlify.app/",
-    tech: ["React", "React Query", "TypeScript", "Tailwind"]
-  },
-  {
-    name: "ToyStore",
-    description: "Firestore-based toy management application where users can add, edit, delete, and filter toys.",
-    icon: toystore,
-    screenshot: toyStoreScreenShot,
-    link: "https://toystore-sigma.vercel.app/",
-    tech: ["React", "Context API", "Firebase", "Tailwind"]
   }
 ]
 
