@@ -4,6 +4,7 @@ import { Navbar } from './cmps/Navar'
 import { Projects } from './cmps/Projects'
 import { Skills } from './cmps/Skills'
 import { Experience } from './cmps/Experience'
+import { Footer } from './cmps/Footer'
 import 'react-toastify/dist/ReactToastify.css'
 import { ToastContainer } from 'react-toastify'
 import { Certifications } from './cmps/Certifications'
@@ -32,6 +33,7 @@ function App() {
         <Projects />
         <Certifications />
         <Contact />
+        <Footer />
       </div>
     </div>
   )
