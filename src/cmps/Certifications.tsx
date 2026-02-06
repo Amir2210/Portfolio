@@ -45,9 +45,11 @@ export function Certifications() {
       whileInView="animate"
       viewport={{ once: true }}
     >
-      <h2 className='text-2xl sm:text-3xl font-semibold text-center mb-12 drop-shadow-lg'>
-        <span className="gradient-text">Certifications</span>
-      </h2>
+      <div className="inline-block w-full text-center mb-12">
+        <h2 className='inline-block text-2xl sm:text-3xl font-semibold backdrop-blur-xl bg-black/60 px-8 py-3 rounded-full border border-white/10'>
+          <span className="gradient-text">Certifications</span>
+        </h2>
+      </div>
       
       <div className='flex flex-wrap justify-center gap-4'>
         {certifications.map((cert, index) => (
@@ -56,7 +58,7 @@ export function Certifications() {
             href={cert.file} 
             target='_blank'
             variants={itemVariants}
-            className='group flex items-center gap-3 px-5 py-3 backdrop-blur-xl bg-black/40 border border-white/20 rounded-full text-white/90 hover:bg-black/50 hover:text-white hover:border-white/30 transition-all duration-300 shadow-lg'
+            className='group flex items-center gap-3 px-5 py-3 backdrop-blur-xl bg-black/60 border border-white/20 rounded-full text-white hover:bg-black/70 hover:border-white/30 transition-all duration-300 shadow-lg'
             whileHover={{ scale: 1.02 }}
           >
             <span className="text-sm font-medium">{cert.name}</span>

@@ -55,11 +55,13 @@ export function Skills() {
       whileInView="animate"
       viewport={{ once: true }}
     >
-      <h2 className='text-2xl sm:text-3xl font-semibold text-center mb-12 drop-shadow-lg'>
-        <span className="gradient-text">My Skills</span>
-      </h2>
+      <div className="inline-block w-full text-center mb-12">
+        <h2 className='inline-block text-2xl sm:text-3xl font-semibold backdrop-blur-xl bg-black/60 px-8 py-3 rounded-full border border-white/10'>
+          <span className="gradient-text">My Skills</span>
+        </h2>
+      </div>
       
-      <div className="backdrop-blur-xl bg-black/40 border border-white/20 rounded-3xl p-8 shadow-2xl">
+      <div className="backdrop-blur-xl bg-black/60 border border-white/20 rounded-3xl p-8 shadow-2xl">
         <div className='grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6 place-items-center'>
           {skills.map((skill, index) => (
             <motion.div 

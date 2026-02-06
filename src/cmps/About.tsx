@@ -43,13 +43,13 @@ export function About() {
             <a 
               href={resume} 
               target='_blank'
-              className='px-6 py-3 backdrop-blur-xl bg-white/15 border border-white/30 rounded-full text-white font-medium hover:bg-white/25 transition-all duration-300 shadow-lg'
+              className='px-6 py-3 backdrop-blur-xl bg-white/20 border border-white/30 rounded-full text-white font-medium hover:bg-white/30 transition-all duration-300 shadow-lg'
             >
               Download CV
             </a>
             <a 
               href="#certifications"
-              className='px-6 py-3 backdrop-blur-xl bg-black/30 border border-white/20 rounded-full text-white/90 hover:bg-black/40 transition-all duration-300 shadow-lg'
+              className='px-6 py-3 backdrop-blur-xl bg-black/40 border border-white/20 rounded-full text-white hover:bg-black/50 transition-all duration-300 shadow-lg'
             >
               Certifications
             </a>

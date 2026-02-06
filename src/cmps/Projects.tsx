@@ -91,9 +91,11 @@ export function Projects() {
       whileInView="animate"
       viewport={{ once: true }}
     >
-      <h2 className='text-2xl sm:text-3xl font-semibold text-center mb-12 drop-shadow-lg'>
-        <span className="gradient-text">Projects</span>
-      </h2>
+      <div className="inline-block w-full text-center mb-12">
+        <h2 className='inline-block text-2xl sm:text-3xl font-semibold backdrop-blur-xl bg-black/60 px-8 py-3 rounded-full border border-white/10'>
+          <span className="gradient-text">Projects</span>
+        </h2>
+      </div>
       
       <div className='grid sm:grid-cols-2 gap-6'>
         {projects.map((project, index) => (
@@ -102,7 +104,7 @@ export function Projects() {
             href={project.link} 
             target="_blank"
             variants={itemVariants}
-            className="group relative overflow-hidden backdrop-blur-xl bg-black/50 border border-white/20 rounded-2xl p-6 hover:bg-black/60 hover:border-white/30 transition-all duration-500 shadow-xl"
+            className="group relative overflow-hidden backdrop-blur-xl bg-black/70 border border-white/20 rounded-2xl p-6 hover:bg-black/80 hover:border-white/30 transition-all duration-500 shadow-xl"
             whileHover={{ y: -5 }}
           >
             {/* Project Content */}
