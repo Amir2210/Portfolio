@@ -27,10 +27,11 @@ Feel free to reach out to me on:
 **I'm always open to collaborating on exciting projects!**
 
 **Happy Coding!**
-![‏‏לכידה](https://github.com/Amir2210/Portfolio/assets/107459404/906bd107-7712-4d82-9c4e-f41ac1f1c89d)
-![‏‏לכידה](https://github.com/Amir2210/Portfolio/assets/107459404/04cfed0b-e459-46d8-9a55-488ae2384bf7)
-![‏‏לכידה](https://github.com/Amir2210/Portfolio/assets/107459404/1892e7ca-4244-4e78-8411-787a00e750d0)
-![‏‏לכידה](https://github.com/Amir2210/Portfolio/assets/107459404/79f59d66-86f1-4fec-b273-6438b28de198)
+<img width="1898" height="943" alt="1" src="https://github.com/user-attachments/assets/5f994f95-5816-4dcd-ba7f-a4c45cb88566" />
+<img width="1899" height="886" alt="2" src="https://github.com/user-attachments/assets/2e853bb1-b9e1-4b49-a541-a5b47571348f" />
+<img width="1904" height="938" alt="3" src="https://github.com/user-attachments/assets/6f49414d-74f9-40f6-a018-3e2c74dd0fd5" />
+<img width="1898" height="937" alt="4" src="https://github.com/user-attachments/assets/a08c5341-a8c3-4249-86d1-93ad3167a65f" />
+<img width="439" height="805" alt="5" src="https://github.com/user-attachments/assets/644b4cb3-8f30-406e-806c-b6bcc63f0c65" />
 
 
 
