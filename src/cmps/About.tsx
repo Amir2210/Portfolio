@@ -41,7 +41,7 @@ export function About() {
       animate="animate"
     >
       <div className='sm:flex gap-8 items-center justify-center' id='about'>
-        <motion.div className="flex-1 max-w-xl" variants={containerVariants}>
+        <motion.div className="flex-1 max-w-xl text-center sm:text-left" variants={containerVariants}>
           <motion.h1 
             className='text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight drop-shadow-lg'
             variants={itemVariants}
@@ -62,7 +62,7 @@ export function About() {
           </motion.p>
           
           {/* Buttons */}
-          <motion.div className='flex flex-wrap gap-4 mt-8' variants={itemVariants}>
+          <motion.div className='flex flex-wrap justify-center sm:justify-start gap-4 mt-8' variants={itemVariants}>
             <a 
               href={resume} 
               target='_blank'
