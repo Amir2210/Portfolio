@@ -1,4 +1,5 @@
 import { motion } from "framer-motion"
+import { SpotlightCard } from "./SpotlightCard"
 import js from '../assets/imgs/js.png'
 import css from '../assets/imgs/css.png'
 import html from '../assets/imgs/html.png'
@@ -82,11 +83,12 @@ export function Skills() {
         <span className="gradient-text">My Skills</span>
       </motion.h2>
       
-      <motion.div 
-        className="backdrop-blur-xl bg-black/60 border border-white/20 rounded-3xl p-8 shadow-2xl"
+      <SpotlightCard 
+        className="rounded-3xl p-8 bg-black/60 border-white/20"
         variants={cardVariants}
+        spotlightColor="rgba(34, 211, 238, 0.15)" // Subtle cyan tint
       >
-        <div className='grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6 place-items-center'>
+        <div className='grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6 place-items-center relative z-10'>
           {skills.map((skill, index) => (
             <motion.div 
               key={index}
@@ -103,7 +105,7 @@ export function Skills() {
             </motion.div>
           ))}
         </div>
-      </motion.div>
+      </SpotlightCard>
     </motion.section>
   )
 }

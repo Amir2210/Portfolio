@@ -1,5 +1,6 @@
 import { FaExternalLinkAlt } from "react-icons/fa"
 import { motion } from "framer-motion"
+import { SpotlightCard } from "./SpotlightCard"
 import jonTracker from '../assets/imgs/jobtracker.png'
 import comfyStore from '../assets/imgs/comfystore.png'
 import jobTrackerScreenShot from '../assets/projectScreenshots/jobtrackerScreenshot.png'
@@ -70,59 +71,64 @@ export function Projects() {
       
       <div className='grid sm:grid-cols-2 gap-6'>
         {projects.map((project, index) => (
-          <motion.a 
+          <SpotlightCard 
             key={index}
-            href={project.link} 
-            target="_blank"
             variants={itemVariants}
-            className="group relative overflow-hidden backdrop-blur-xl bg-black/70 border border-white/20 rounded-2xl p-6 hover:bg-black/80 hover:border-white/30 transition-all duration-500 shadow-xl"
+            className="group relative overflow-hidden backdrop-blur-xl bg-black/70 border border-white/20 rounded-2xl hover:bg-black/80 hover:border-white/30 transition-all duration-500 shadow-xl"
             whileHover={{ y: -8, scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
+            spotlightColor="rgba(168, 85, 247, 0.2)"
           >
-            {/* Project Content */}
-            <div className="relative z-10">
-              {/* Header */}
-              <div className="flex items-start justify-between mb-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-xl bg-white/15 flex items-center justify-center p-2 shadow-lg">
-                    <img src={project.icon} alt={project.name} className="w-full h-full object-contain" />
-                  </div>
-                  <div>
-                    <h3 className="text-white font-semibold text-lg flex items-center gap-2 drop-shadow-md">
-                      {project.name}
-                      <FaExternalLinkAlt className="text-xs text-white/50 group-hover:text-white transition-colors" />
-                    </h3>
+            <a 
+              href={project.link} 
+              target="_blank"
+              className="block w-full h-full p-6"
+            >
+              {/* Project Content */}
+              <div className="relative z-10 font-bold">
+                {/* Header */}
+                <div className="flex items-start justify-between mb-4">
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 rounded-xl bg-white/15 flex items-center justify-center p-2 shadow-lg">
+                      <img src={project.icon} alt={project.name} className="w-full h-full object-contain" />
+                    </div>
+                    <div>
+                      <h3 className="text-white font-semibold text-lg flex items-center gap-2 drop-shadow-md">
+                        {project.name}
+                        <FaExternalLinkAlt className="text-xs text-white/50 group-hover:text-white transition-colors" />
+                      </h3>
+                    </div>
                   </div>
                 </div>
+                
+                {/* Description */}
+                <p className="text-white/80 text-sm leading-relaxed mb-4 font-normal">
+                  {project.description}
+                </p>
+                
+                {/* Tech Stack */}
+                <div className="flex flex-wrap gap-2">
+                  {project.tech.map((tech, techIndex) => (
+                    <span 
+                      key={techIndex}
+                      className="px-3 py-1 text-xs rounded-full bg-white/10 text-white/90 border border-white/20 font-medium"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </div>
-              
-              {/* Description */}
-              <p className="text-white/80 text-sm leading-relaxed mb-4">
-                {project.description}
-              </p>
-              
-              {/* Tech Stack */}
-              <div className="flex flex-wrap gap-2">
-                {project.tech.map((tech, techIndex) => (
-                  <span 
-                    key={techIndex}
-                    className="px-3 py-1 text-xs rounded-full bg-white/15 text-white/90 border border-white/20"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </div>
 
-            {/* Hover Preview Image */}
-            <div className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500">
-              <img 
-                src={project.screenshot} 
-                alt={project.name} 
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </motion.a>
+              {/* Hover Preview Image */}
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500">
+                <img 
+                  src={project.screenshot} 
+                  alt={project.name} 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </a>
+          </SpotlightCard>
         ))}
       </div>
     </motion.section>
