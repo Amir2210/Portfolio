@@ -10,11 +10,19 @@ import { ToastContainer } from 'react-toastify'
 import { Certifications } from './cmps/Certifications'
 import Aurora from './cmps/Aurora'
 import { CustomCursor } from './cmps/CustomCursor'
+import { motion, useScroll } from 'framer-motion'
 
 function App() {
+  const { scrollYProgress } = useScroll()
 
   return (
     <div className='font-plusJakartaSans relative min-h-screen bg-black'>
+      {/* Page Scroll Progress Bar */}
+      <motion.div
+        className="fixed top-0 left-0 right-0 h-1.5 origin-left z-[100] bg-gradient-to-r from-purple-500 via-cyan-400 to-blue-500 shadow-[0_0_10px_rgba(34,211,238,0.5)]"
+        style={{ scaleX: scrollYProgress }}
+      />
+
       <CustomCursor />
       
       {/* Global Background - Aurora animated background */}

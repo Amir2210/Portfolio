@@ -1,6 +1,6 @@
 import { FaLinkedin } from "react-icons/fa"
 import { FaGithub } from "react-icons/fa"
-import { AnimatedAvatar } from "./AnimatedAvatar"
+import avatar from '../assets/imgs/avatar.png'
 
 export function Navbar() {
   return (
@@ -8,8 +8,8 @@ export function Navbar() {
       <div className="backdrop-blur-xl bg-black/70 border border-white/20 rounded-full px-6 py-3 shadow-2xl">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <div className='size-12 -ml-2'>
-            <AnimatedAvatar className="w-10 h-10" imageClassName="border-2" depth={20} />
+          <div className='size-10'>
+            <img className='rounded-full shadow-lg h-full w-full object-cover' src={avatar} alt="logo" />
           </div>
 
           {/* Desktop Navigation */}
