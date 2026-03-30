@@ -9,11 +9,14 @@ import 'react-toastify/dist/ReactToastify.css'
 import { ToastContainer } from 'react-toastify'
 import { Certifications } from './cmps/Certifications'
 import Aurora from './cmps/Aurora'
+import { CustomCursor } from './cmps/CustomCursor'
 
 function App() {
 
   return (
     <div className='font-plusJakartaSans relative min-h-screen bg-black'>
+      <CustomCursor />
+      
       {/* Global Background - Aurora animated background */}
       <div className="fixed inset-0 z-0 w-screen h-screen">
         <Aurora
