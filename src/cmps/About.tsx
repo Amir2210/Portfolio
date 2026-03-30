@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import avatar from '../assets/imgs/avatar.png'
+import { AnimatedAvatar } from "./AnimatedAvatar"
 import resume from '../assets/certifications/resume.pdf'
 
 export function About() {
@@ -81,17 +81,10 @@ export function About() {
         
         {/* Avatar */}
         <motion.div 
-          className="mt-8 sm:mt-0 flex justify-center"
+          className="mt-8 sm:mt-0 flex justify-center w-full sm:w-auto z-10"
           variants={avatarVariants}
         >
-          <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-500/30 to-cyan-500/30 rounded-full blur-3xl"></div>
-            <img 
-              src={avatar} 
-              alt="avatar" 
-              className="relative w-48 sm:w-64 lg:w-72 drop-shadow-2xl"
-            />
-          </div>
+          <AnimatedAvatar className="w-48 sm:w-64 lg:w-72" depth={50} />
         </motion.div>
       </div>
     </motion.section>
