@@ -7,7 +7,7 @@ const experience = [
     company: "Amdocs",
     type: "Full-time",
     period: "Jul 2025 - Present",
-    duration: "8 mos",
+    duration: "1 yr",
     location: "Raanana, Center District, Israel",
     description: "Developing high-scale web applications for the Vodafone-Three (UK) merger integration, focusing on building scalable UI solutions.",
     responsibilities: [
