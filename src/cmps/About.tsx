@@ -1,5 +1,6 @@
 import { motion } from "framer-motion"
 import { AnimatedAvatar } from "./AnimatedAvatar"
+import { RotatingText } from "./RotatingText"
 import resume from '../assets/certifications/resume.pdf'
 
 export function About() {
@@ -49,10 +50,14 @@ export function About() {
             <span className="gradient-text">Amir Yankolovich</span>
           </motion.h1>
           <motion.h2 
-            className='mt-4 text-xl sm:text-2xl text-white font-medium drop-shadow-md'
+            className='mt-4 text-xl sm:text-2xl text-white font-medium drop-shadow-md flex items-center justify-center sm:justify-start gap-2 flex-wrap'
             variants={itemVariants}
           >
-            Full Stack / Frontend Developer
+            <span>I'm a</span>
+            <RotatingText
+              words={["Full Stack Developer", "Frontend Developer", "React Specialist", "UI Engineer"]}
+              className="font-semibold"
+            />
           </motion.h2>
           <motion.p 
             className='mt-6 text-white/90 leading-relaxed text-base drop-shadow-sm'

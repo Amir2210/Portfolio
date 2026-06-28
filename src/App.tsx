@@ -3,6 +3,7 @@ import { Contact } from './cmps/Contact'
 import { Navbar } from './cmps/Navar'
 import { Projects } from './cmps/Projects'
 import { Skills } from './cmps/Skills'
+import { Stats } from './cmps/Stats'
 import { Experience } from './cmps/Experience'
 import { Footer } from './cmps/Footer'
 import 'react-toastify/dist/ReactToastify.css'
@@ -39,6 +40,7 @@ function App() {
         <ToastContainer position='top-center' autoClose={2000} />
         <Navbar />
         <About />
+        <Stats />
         <Skills />
         <Experience />
         <Projects />
