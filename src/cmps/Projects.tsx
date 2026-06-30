@@ -3,8 +3,10 @@ import { motion } from "framer-motion"
 import { SpotlightCard } from "./SpotlightCard"
 import jonTracker from '../assets/imgs/jobtracker.png'
 import comfyStore from '../assets/imgs/comfystore.png'
+import singRoom from '../assets/imgs/singRoom.png'
 import jobTrackerScreenShot from '../assets/projectScreenshots/jobtrackerScreenshot.png'
 import comfyScreenShot from '../assets/projectScreenshots/comfyScreenShot.png'
+import singRoomScreenShot from '../assets/projectScreenshots/singRoomScreenShot.png'
 
 const projects = [
   {
@@ -22,6 +24,14 @@ const projects = [
     screenshot: comfyScreenShot,
     link: "https://comfy-store-xaft.onrender.com",
     tech: ["React", "Node.js", "Express", "MongoDB", "Tailwind"]
+  },
+  {
+    name: "SingRoom",
+    description: "Real-Time Collaborative Music Rehearsal Platform. SingRoom is a web application that enables musicians to rehearse together remotely.",
+    icon: singRoom,
+    screenshot: singRoomScreenShot,
+    link: "https://jamoveo-1zvz.onrender.com/",
+    tech: ["React", "Redux", "Tailwind", "Node.js", "Express", "MongoDB", "Socket.io", "JWT"]
   }
 ]
 
