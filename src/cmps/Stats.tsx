@@ -11,7 +11,7 @@ const stats: Stat[] = [
   { value: 1, suffix: "+", label: "Years Experience" },
   { value: 12, suffix: "", label: "Technologies" },
   { value: 7, suffix: "", label: "Certifications" },
-  { value: 2, suffix: "+", label: "Featured Projects" },
+  { value: 3, suffix: "+", label: "Featured Projects" },
 ]
 
 function Counter({ to, suffix }: { to: number; suffix?: string }) {
